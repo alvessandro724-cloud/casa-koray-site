@@ -1,0 +1,32 @@
+{
+  "filmes.h2": "Every Room in Motion.",
+  "filmes.lead": "Short films made from the house’s photos. Pick a room and watch.",
+
+  "filmes.t.chegada": "Arrival and Living Room",
+  "filmes.t.mesa-gourmet": "Dining and Gourmet",
+  "filmes.t.piscinas-mar": "Pools and Sea",
+  "filmes.t.suites": "Suites",
+  "filmes.t.cinema": "Cinema",
+  "filmes.t.noite": "Night",
+
+  "filmes.chapters": "Choose a film",
+  "filmes.controls": "Film controls",
+  "filmes.region": "Film",
+  "filmes.play": "Play",
+  "filmes.pause": "Pause",
+  "filmes.prev": "Previous Film",
+  "filmes.next": "Next Film",
+  "filmes.shotprev": "Previous Shot",
+  "filmes.shotnext": "Next Shot",
+  "filmes.shotcount": "Shot {n} of {total}",
+  "filmes.fs": "Full Screen",
+  "filmes.fsexit": "Exit Full Screen",
+  "filmes.again": "Watch Again",
+  "filmes.transcript": "Text Description",
+  "filmes.error": "This film could not be loaded.",
+
+  "filmes.live.selected": "Film selected: {title}",
+  "filmes.live.playing": "Playing: {title}",
+  "filmes.live.paused": "Paused",
+  "filmes.live.ended": "Film ended: {title}"
+}

@@ -1,0 +1,55 @@
+/* layout.css | F1 (fundacao). Container, secao, grade, pilhas, utilitarios de layout.
+   Breakpoints literais (variaveis nao valem em @media): 640, 768, 1024, 1180, 1280, 1440. Mobile primeiro. */
+
+/* Container: min(100% - 2 gutters, largura). Nunca rolagem horizontal. */
+.container{ width:min(100% - 2 * var(--gutter), var(--container)); margin-inline:auto; }
+.container--wide{ width:min(100% - 2 * var(--gutter), var(--container-wide)); margin-inline:auto; }
+
+/* Midia de borda a borda (so hero e portal): para de crescer em 2560 px, o resto fica em --bg-deep */
+.bleed{ width:100%; max-width:2560px; margin-inline:auto; }
+.media-max{ max-width:var(--media-max); }
+
+/* Secao: ritmo vertical unico. Fundo e capitulo sao da propria secao (tokens). */
+.section{ position:relative; padding-block:var(--section-y); }
+:where([data-chapter="night"]){ color:var(--fg); }
+[data-chapter="night"]:where(.section){ background-color:var(--bg); }   /* antes das variantes: --alt/--deep/--tint ganham */
+.section--tight{ padding-block:calc(var(--section-y) * .6); }
+.section--flush{ padding-block:0; }
+.section--flush-top{ padding-block-start:0; }
+.section--flush-bottom{ padding-block-end:0; }
+.section--alt{ background-color:var(--bg-alt); }
+.section--tint{ background-color:var(--tint); }
+.section--deep{ background-color:var(--bg-deep); }
+
+/* Secoes pesadas fora da dobra (NAO usar no portal do tour nem no palco: ambos usam view-timeline) */
+.cv-auto{ content-visibility:auto; contain-intrinsic-size:auto 900px; }
+
+/* Cabecalho de secao: sempre empilhado (nunca titulo a esquerda e texto flutuando a direita) */
+.section__head{ display:grid; gap:var(--space-4); justify-items:start; margin-block-end:clamp(var(--space-6),2.4rem + 2vw,var(--space-8)); }
+.section__head > :where(.eyebrow){ margin-block-end:calc(var(--space-2) * -1); }
+
+/* Pilha vertical: --stack ajusta o espaco */
+.stack{ display:flex; flex-direction:column; gap:var(--stack,var(--space-4)); }
+.stack--tight{ --stack:var(--space-2); }
+.stack--loose{ --stack:var(--space-6); }
+/* Aglomerado horizontal que quebra linha (botoes, chips) */
+.cluster{ display:flex; flex-wrap:wrap; align-items:center; gap:var(--cluster,var(--space-3)); }
+.cluster--tight{ --cluster:var(--space-2); }
+.cluster--loose{ --cluster:var(--space-5); }
+
+/* Grade de colunas do brief 6: 4 (mobile), 8 (tablet), 12 (desktop). Cada secao posiciona suas celulas. */
+.grid{ display:grid; gap:var(--gap); }
+.grid-12{ display:grid; gap:var(--gap); grid-template-columns:repeat(4,minmax(0,1fr)); }
+@media (min-width:768px){ .grid-12{ grid-template-columns:repeat(8,minmax(0,1fr)); } }
+@media (min-width:1024px){ .grid-12{ grid-template-columns:repeat(12,minmax(0,1fr)); } }
+.grid-auto{ display:grid; gap:var(--gap); grid-template-columns:repeat(auto-fit,minmax(min(100%,var(--min,16rem)),1fr)); }
+
+/* Utilitarios de fluxo */
+.text-center{ text-align:center; }
+.min-w-0{ min-width:0; }
+.fill{ position:absolute; inset:0; }
+.isolate{ isolation:isolate; }
+.on-photo{ color:var(--on-photo); }
+
+/* O rodape ganha respiro para a barra fixa mobile (< 1024); brief 8.3 */
+@media (max-width:1023px){ .has-bar-pad{ padding-block-end:calc(var(--bar-h) + env(safe-area-inset-bottom) + var(--space-4)); } }

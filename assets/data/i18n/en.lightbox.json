@@ -1,0 +1,10 @@
+{
+  "lightbox.label": "Photo Gallery",
+  "lightbox.prev": "Previous Photo",
+  "lightbox.next": "Next Photo",
+  "lightbox.zoomin": "Zoom In",
+  "lightbox.zoomout": "Zoom Out",
+  "lightbox.thumbs": "Photos",
+  "lightbox.counter": "{n} of {total}",
+  "lightbox.announce": "Photo {n} of {total}"
+}

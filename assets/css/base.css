@@ -1,0 +1,160 @@
+/* base.css | F1 (fundacao). Reset, tokens de componente, camadas de movimento, tipografia, utilitarios.
+   Regras: so tokens semanticos; so transform/opacity animam (cor de controles pequenos, listada por nome);
+   nenhum travessao em comentarios ou texto; alturas de janela so em svh/dvh. Complementa o "Base global" de tokens.css. */
+
+/* ==========================================================================
+   1. Tokens de componente
+   Constantes (nao mudam com o tema) e dois valores que mudam (marcados). Derivados de tema
+   NAO devem referenciar --bg/--fg/etc. aqui: var() em :root congelaria o valor do Dia.
+   ========================================================================== */
+:root{
+  --hit:44px; --hit-lg:48px; --hit-xl:56px;                 /* alvos de toque */
+  --btn-h:52px; --btn-pad:1.75rem; --btn-pad-sm:1.25rem; --btn-icon:36px;   /* botao: altura, recuo (28 px; 20 px compacto), circulo do icone */
+  --field-h:56px;
+  --dur-pic:600ms;                                           /* fade de imagem ao decodificar */
+  --reveal-y:16px; --reveal-scale:1.04;                      /* revelacao: texto e imagem */
+  --glass-filter:none; --glass-filter-sm:none;            /* visual clean: sem vidro fosco (pedido do dono, skills taste e minimalist-ui) */
+  --fx-on-accent-soft:rgb(255 252 247 / .18);                /* circulo do icone no botao primario */
+  --fx-line-photo:rgb(255 252 247 / .7);                     /* borda de botao sobre foto */
+  --fx-line-photo-soft:rgb(255 252 247 / .4);                /* borda de botao de icone sobre foto */
+  --fx-light-bg:var(--linho); --fx-light-fg:var(--tinta);    /* botao claro sobre midia (igual nos dois temas) */
+  --fx-btn-ring:transparent;                                 /* anel interno do primario: so Noite (brief 5.2) */
+}
+:root[data-theme="night"]{
+  --fx-btn-ring:rgb(255 252 247 / .35);
+}
+
+/* Filetes passam de --line a --line-input com contraste alto (brief 11.7) */
+@media (prefers-contrast:more){
+  :root,
+  :root[data-theme="night"],
+  :root:not([data-theme-pref="day"]) [data-chapter="night"]{ --line:var(--line-input); }
+}
+
+/* ==========================================================================
+   2. Camadas de movimento: html[data-motion="full|lite|none"] (escrito por motion.js e pelo <head>)
+   "none" cobre prefers-reduced-motion; os tokens colapsam tambem quando o atributo e forcado a mao.
+   ========================================================================== */
+html[data-motion="lite"]{ --stagger:0ms; --dur-reveal:400ms; --dur-pic:400ms; }
+html[data-motion="none"]{
+  --dur-fast:1ms; --dur-base:1ms; --dur-slow:1ms; --dur-reveal:1ms; --dur-scene:1ms; --dur-pic:1ms;
+  --stagger:0ms; --dur-xfade:200ms;
+  scroll-behavior:auto;
+}
+@media (prefers-reduced-motion:reduce){ :root{ --dur-pic:1ms; } }
+
+/* ==========================================================================
+   3. Reset minimo
+   ========================================================================== */
+*,*::before,*::after{ box-sizing:border-box; }
+html{ scrollbar-gutter:stable; font-synthesis:none; }
+html[data-dialog-open]{ overflow-y:hidden; }                /* data-dialog-open: escrito por dom.js enquanto houver <dialog> aberto */
+body{ min-height:100svh; overflow-wrap:break-word; }
+:where(h1,h2,h3,h4,h5,h6,p,figure,blockquote,dl,dd,pre,hr){ margin:0; }
+:where(ul,ol){ margin:0; padding-inline-start:1.25em; }
+:where(ul[class],ol[class]){ padding:0; list-style:none; }
+:where(img,picture,svg,video,canvas,iframe){ display:block; max-width:100%; }
+:where(img,video){ height:auto; }
+:where(button,input,select,textarea){ font:inherit; color:inherit; letter-spacing:inherit; margin:0; }
+:where(button){ background:none; border:0; padding:0; cursor:pointer; -webkit-appearance:none; appearance:none; }
+:where(a){ color:inherit; text-decoration:none; }
+:where(table){ border-collapse:collapse; }
+:where(summary){ cursor:pointer; list-style:none; }
+:where(summary)::-webkit-details-marker{ display:none; }
+:where(dialog){ padding:0; border:0; color:inherit; max-width:none; max-height:none; overscroll-behavior:contain; }
+:where(hr){ border:0; border-block-start:1px solid var(--line); }
+[hidden]{ display:none !important; }
+::selection{ background:var(--fg); color:var(--bg); }
+[tabindex="-1"]:focus{ outline:none; }                       /* alvos de foco programatico (main, secoes): nao sao controles */
+/* Ancoras: o deslocamento (nav + 40 px) vem do scroll-padding-top do html em tokens.css. O scroll-margin-top das secoes
+   (tokens.css) SOMARIA outro --anchor-offset (200 px no total), entao aqui ele e zerado: titulo ~100 px abaixo da nav, nao 200. */
+section[id]{ scroll-margin-top:0; }
+
+/* ==========================================================================
+   4. Tipografia (brief 5.4). Longhands de proposito: o shorthand "font" zeraria font-synthesis e variantes.
+   ========================================================================== */
+:where(h1,.h1,h2,.h2,h3,.h3,h4,.h4){ font-family:var(--font-display); text-wrap:balance; font-variant-numeric:lining-nums proportional-nums; }
+:where(h1,.h1){ font-size:var(--fs-h1); font-weight:400; line-height:1; letter-spacing:-.012em; }
+:where(h2,.h2){ font-size:var(--fs-h2); font-weight:400; line-height:1.04; letter-spacing:-.01em; max-width:18ch; }
+:where(h3,.h3){ font-size:var(--fs-h3); font-weight:500; line-height:1.1; letter-spacing:-.005em; }
+:where(h4,.h4){ font-size:var(--fs-h4); font-weight:500; line-height:1.2; letter-spacing:0; }
+:where(h5,h6){ font-size:var(--fs-body); font-weight:700; line-height:1.3; }
+:where(h1,h2,h3,h4) em{ font-style:italic; font-weight:inherit; padding-inline-end:.06em; }    /* ultimo glifo do italico nao corta */
+:where(p){ max-width:var(--measure); text-wrap:pretty; }
+:where(b,strong){ font-weight:700; }
+:where(small){ font-size:var(--fs-caption); }
+:where(figcaption){ font-size:var(--fs-caption); line-height:1.45; color:var(--fg-3); }
+:where(sub,sup){ line-height:0; }
+
+.lead{ font-size:var(--fs-lead); font-weight:300; line-height:1.6; color:var(--fg-2); max-width:54ch; text-wrap:pretty; }
+.caption{ font-size:var(--fs-caption); line-height:1.45; color:var(--fg-3); }
+.eyebrow{
+  font-family:var(--font-ui); font-size:var(--fs-eyebrow); font-weight:500; line-height:1.3;
+  letter-spacing:.24em; text-transform:uppercase; color:var(--accent-text);
+}
+.stat{
+  font-family:var(--font-display); font-size:var(--fs-stat); font-weight:300; line-height:1; letter-spacing:-.02em;
+  font-variant-numeric:lining-nums tabular-nums;
+}
+.stat__unit{ font-family:var(--font-ui); font-size:.34em; font-weight:400; letter-spacing:.04em; vertical-align:baseline; }   /* espaco via &nbsp; no HTML: R$&nbsp;13.000 */
+.rating{
+  font-family:var(--font-display); font-size:var(--fs-rating); font-weight:300; line-height:.95; letter-spacing:-.03em;
+  font-variant-numeric:lining-nums tabular-nums;
+}
+.quote{ font-family:var(--font-display); font-size:var(--fs-h4); font-style:italic; font-weight:400; line-height:1.35; letter-spacing:0; text-wrap:pretty; }
+.num,:where(time){ font-variant-numeric:lining-nums tabular-nums; }
+.balance{ text-wrap:balance; }
+.pretty{ text-wrap:pretty; }
+.measure{ max-width:var(--measure); }
+.nowrap{ white-space:nowrap; }
+.clamp-3{ display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:3; line-clamp:3; overflow:hidden; }
+.break-anywhere{ overflow-wrap:anywhere; }
+
+/* ==========================================================================
+   5. Pular para o conteudo (primeiro elemento focavel)
+   ========================================================================== */
+.skip-link{
+  position:fixed; z-index:var(--z-skip); top:calc(var(--space-3) + env(safe-area-inset-top)); left:50%;
+  display:inline-flex; align-items:center; min-height:var(--hit); padding:0 var(--space-5);
+  border-radius:var(--r-pill); background:var(--fg); color:var(--bg);
+  font-family:var(--font-ui); font-size:var(--fs-btn); font-weight:600; line-height:1.25; white-space:nowrap;
+  transform:translate(-50%,calc(-100% - var(--space-6)));
+  transition:transform var(--dur-base) var(--ease-out);
+}
+.skip-link:focus-visible{ transform:translate(-50%,0); }
+
+/* ==========================================================================
+   6. Vidro (so em elementos fixos sobre foto ou canvas; brief 5.6). Solido quando necessario.
+   .glass: superficie clara/escura do tema. .glass--photo: sobre foto (HUD, nav sobre foto).
+   ========================================================================== */
+.glass{
+  background:var(--glass-bg); border:1px solid var(--glass-line);
+  -webkit-backdrop-filter:var(--glass-filter); backdrop-filter:var(--glass-filter);
+}
+.glass--photo{
+  background:var(--hud-bg); border-color:var(--fx-line-photo-soft); color:var(--on-photo);
+}
+@media (prefers-reduced-transparency:reduce),(prefers-contrast:more){
+  .glass{ background:var(--surface); -webkit-backdrop-filter:none; backdrop-filter:none; }
+  .glass--photo{ background:var(--hud-solid); }
+}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+  .glass{ background:var(--surface); }
+  .glass--photo{ background:var(--hud-solid); }
+}
+html[data-motion="lite"] .glass{ background:var(--surface); -webkit-backdrop-filter:none; backdrop-filter:none; }
+html[data-motion="lite"] .glass--photo{ background:var(--hud-solid); }
+
+/* ==========================================================================
+   7. Preferencias do sistema
+   ========================================================================== */
+@media (forced-colors:active){
+  :where(a,button,[role="button"],input,select,textarea,summary,[tabindex]):focus-visible{ outline:2px solid Highlight; box-shadow:none; }
+  .glass,.glass--photo{ background:Canvas; border-color:CanvasText; color:CanvasText; }
+}
+@media print{
+  .skip-link{ display:none; }
+  .reveal,[data-reveal]{ opacity:1 !important; transform:none !important; animation:none !important; }
+}
+/* Cormorant usa numerais antigos por padrao: alinhados em todo texto de serifa */
+.quote,.nav__brand,.menu__brand,.rating,.stat{ font-variant-numeric:lining-nums; }

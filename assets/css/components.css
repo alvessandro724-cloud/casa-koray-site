@@ -1,0 +1,384 @@
+/* components.css | F1 (fundacao). Componentes compartilhados do brief secao 7, com todos os estados.
+   Uso: so tokens semanticos (--bg --fg --accent ...) e tokens de componente (base.css secao 1).
+   Hover so com ponteiro fino (@media hover). Foco visivel vem de tokens.css (anel duplo); aqui so se mexe onde ha box-shadow proprio.
+   Animam apenas transform/opacity, mais color/background-color/border-color de controles pequenos, por nome, <= 240 ms. */
+
+/* ==========================================================================
+   0. Icone (saida da macro <x-icon>)
+   ========================================================================== */
+.icon{ display:block; flex:none; fill:currentColor; pointer-events:none; }
+
+/* ==========================================================================
+   1. Botoes: .btn + .btn--primary | secondary | light | photo | text
+   Marcacao: <a|button class="btn btn--primary"><span class="btn__label">Reservar</span>
+             <span class="btn__icon"><x-icon name="arrow-up-right" size="20"></x-icon></span></a>
+   Sem icone final: acrescentar .btn--plain (ou .btn--compact / .btn--bar). Rotulo sempre em 1 linha.
+   ========================================================================== */
+.btn{
+  position:relative; display:inline-flex; align-items:center; justify-content:center; gap:var(--space-3);
+  min-height:var(--btn-h); padding:0 var(--btn-pad);
+  border:1px solid transparent; border-radius:var(--r-pill); background-color:transparent; color:inherit;
+  font-family:var(--font-ui); font-size:var(--fs-btn); font-weight:500; line-height:1.25; letter-spacing:var(--track-caps); text-transform:uppercase;
+  white-space:nowrap; text-align:center; text-decoration:none; cursor:pointer;
+  -webkit-user-select:none; user-select:none;
+  transition:
+    background-color var(--dur-base) var(--ease-out),
+    color var(--dur-base) var(--ease-out),
+    border-color var(--dur-base) var(--ease-out),
+    transform var(--dur-fast) var(--ease-spring);
+}
+.btn__label{ display:block; min-width:0; }
+.btn__icon .icon{ width:16px; height:16px; }
+.btn__icon{
+  /* luxo: seta fina, sem circulo (linha reta de hotel) */
+  display:inline-grid; place-items:center; flex:none; width:auto; height:auto; margin-inline-start:-.15rem; border-radius:0;
+  background-color:transparent;
+  transition:transform var(--dur-base) var(--ease-out);
+}
+.btn:active{ transform:scale(.98); }
+
+/* Sem circulo de icone: recuo simetrico */
+.btn--plain{ padding-inline:var(--btn-pad); }
+.btn--compact{ --btn-h:var(--hit); padding-inline:var(--btn-pad-sm); }                     /* nav: 44 px, 0 20px */
+.btn--bar{ --btn-h:var(--hit-lg); padding-inline:var(--btn-pad-sm); }                      /* barra mobile: 48 px */
+.btn--block{ display:flex; width:100%; }
+
+/* Primario: o unico botao de acento (reservar). Anel interno so em Noite (brief 5.2). */
+.btn--primary{ background-color:var(--accent); color:var(--on-accent); border-color:var(--fx-btn-ring); }
+.btn--primary:active{ background-color:var(--accent-press); }
+
+/* Secundario: contorno em --fg. O circulo do icone acompanha currentColor. */
+.btn--secondary{ border-color:var(--fg); color:var(--fg); }
+
+.btn--secondary:active{ background-color:var(--fg); color:var(--bg); }
+
+/* Claro sobre midia: igual nos dois temas (HUD do tour, onde o urucum nao deve disputar atencao) */
+.btn--light{ background-color:var(--fx-light-bg); color:var(--fx-light-fg); }
+
+
+/* Secundario sobre foto: vidro escuro, borda marfim. Solido sem suporte, em lite e sob preferencias de contraste. */
+.btn--photo{
+  background-color:var(--glass-photo); border-color:var(--fx-line-photo); color:var(--on-photo);
+  -webkit-backdrop-filter:var(--glass-filter-sm); backdrop-filter:var(--glass-filter-sm);
+}
+
+.btn--photo:focus-visible{ outline-color:var(--marfim); box-shadow:0 0 0 5px rgb(var(--scrim) / .7); }
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){ .btn--photo{ background-color:var(--hud-solid); } }
+@media (prefers-reduced-transparency:reduce),(prefers-contrast:more){
+  .btn--photo{ background-color:var(--hud-solid); -webkit-backdrop-filter:none; backdrop-filter:none; }
+}
+html[data-motion="lite"] .btn--photo{ background-color:var(--hud-solid); -webkit-backdrop-filter:none; backdrop-filter:none; }
+
+/* Terciario: texto com sublinhado de acento (um botao que parece link) */
+.btn--text{
+  --btn-h:var(--hit); padding:0; border:0; border-radius:var(--space-1);
+  color:var(--fg); text-decoration:underline; text-decoration-color:var(--accent); text-decoration-thickness:1.5px; text-underline-offset:.2em;
+}
+.btn--text .btn__icon{ width:auto; height:auto; background:none; }
+.btn--text:active{ transform:none; }
+
+/* Hover (ponteiro fino) */
+@media (hover:hover) and (pointer:fine){
+  .btn:hover .btn__icon{ transform:translate(2px,-2px); }
+  .btn--primary:hover{ background-color:var(--accent-hover); }
+  .btn--secondary:hover{ background-color:var(--fg); color:var(--bg); }
+  .btn--light:hover{ background-color:var(--marfim); }
+  .btn--photo:hover{ background-color:var(--hud-solid); }
+  .btn--text:hover{ color:var(--accent-text); }
+  .btn--primary:active:hover{ background-color:var(--accent-press); }
+}
+
+/* Carregando: continua habilitado ate o envio comecar (aria-busy). Troca o glifo por spinner de 16 px. */
+.btn[aria-busy="true"]{ cursor:progress; }
+.btn[aria-busy="true"] .btn__icon > .icon{ display:none; }
+.btn[aria-busy="true"] .btn__spinner{ display:block; }
+.btn:disabled,.btn[aria-disabled="true"]{ opacity:.45; cursor:not-allowed; pointer-events:none; }
+
+/* Spinner: unico circular permitido (feedback de envio). Em movimento "none" vira pulso de opacidade. */
+.spinner,.btn__spinner{
+  width:16px; height:16px; flex:none; border-radius:50%;
+  border:2px solid currentColor; border-inline-end-color:transparent;
+  animation:k-spin .8s linear infinite;
+}
+.btn__spinner{ display:none; }
+html[data-motion="none"] .spinner,html[data-motion="none"] .btn__spinner{
+  border-inline-end-color:currentColor; animation:k-pulse 1.2s var(--ease-inout) infinite;
+}
+@keyframes k-spin{ to{ transform:rotate(360deg); } }
+@keyframes k-pulse{ 50%{ opacity:.35; } }
+
+/* ==========================================================================
+   2. Botao de icone: 44 px, circulo. SEMPRE com aria-label; glifo aria-hidden.
+   <button class="icon-btn" aria-label="Fechar"><x-icon name="x" size="20"></x-icon></button>
+   ========================================================================== */
+.icon-btn{
+  display:inline-grid; place-items:center; flex:none; width:var(--hit); height:var(--hit);
+  border:1px solid var(--line); border-radius:50%; background-color:var(--surface); color:var(--fg); cursor:pointer;
+  transition:
+    background-color var(--dur-base) var(--ease-out),
+    color var(--dur-base) var(--ease-out),
+    border-color var(--dur-base) var(--ease-out),
+    transform var(--dur-fast) var(--ease-spring);
+}
+.icon-btn:active{ transform:scale(.94); }
+.icon-btn--lg{ width:var(--hit-lg); height:var(--hit-lg); }
+.icon-btn--xl{ width:var(--hit-xl); height:var(--hit-xl); }
+.icon-btn--outline{ background-color:transparent; border:1.5px solid var(--line-input); }
+.icon-btn--solid{ background-color:var(--fg); color:var(--bg); border-color:var(--fg); box-shadow:var(--sh-2); }
+.icon-btn--glass{
+  background-color:var(--glass-photo); border-color:var(--fx-line-photo-soft); color:var(--on-photo);
+  -webkit-backdrop-filter:var(--glass-filter-sm); backdrop-filter:var(--glass-filter-sm);
+}
+.icon-btn--glass:focus-visible{ outline-color:var(--marfim); box-shadow:0 0 0 5px rgb(var(--scrim) / .7); }
+.icon-btn[aria-pressed="true"]{ background-color:var(--fg); color:var(--bg); border-color:var(--fg); }
+.icon-btn:disabled,.icon-btn[aria-disabled="true"]{ opacity:.4; cursor:not-allowed; pointer-events:none; }
+@media (hover:hover) and (pointer:fine){
+  .icon-btn:hover{ background-color:var(--bg-alt); }
+  .icon-btn--outline:hover{ background-color:var(--fg); color:var(--bg); border-color:var(--fg); }
+  .icon-btn--solid:hover{ background-color:var(--fg); }
+  .icon-btn--glass:hover{ background-color:var(--hud-solid); }
+  .icon-btn[aria-pressed="true"]:hover{ background-color:var(--fg); }
+}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){ .icon-btn--glass{ background-color:var(--hud-solid); } }
+@media (prefers-reduced-transparency:reduce),(prefers-contrast:more){ .icon-btn--glass{ background-color:var(--hud-solid); -webkit-backdrop-filter:none; backdrop-filter:none; } }
+html[data-motion="lite"] .icon-btn--glass{ background-color:var(--hud-solid); -webkit-backdrop-filter:none; backdrop-filter:none; }
+
+/* ==========================================================================
+   3. Chip e segmento (filtros, seletores). Estado ativo: aria-pressed | aria-checked | aria-current="true" | .is-active
+   <button class="chip" aria-pressed="false">Noite <span class="chip__count">4</span></button>
+   ========================================================================== */
+.chip{
+  display:inline-flex; align-items:center; justify-content:center; gap:var(--space-2);
+  min-height:var(--hit); padding:0 var(--space-4);
+  border:1.5px solid var(--line-input); border-radius:var(--r-pill); background-color:transparent; color:var(--fg);
+  font-size:var(--fs-btn); font-weight:600; line-height:1.25; white-space:nowrap; text-decoration:none; cursor:pointer;
+  transition:
+    background-color var(--dur-base) var(--ease-out),
+    color var(--dur-base) var(--ease-out),
+    border-color var(--dur-base) var(--ease-out),
+    transform var(--dur-fast) var(--ease-spring);
+}
+.chip__count{ color:var(--fg-2); font-weight:500; font-variant-numeric:lining-nums tabular-nums; }
+.chip:active{ transform:scale(.97); }
+.chip[aria-pressed="true"],.chip[aria-checked="true"],.chip[aria-current="true"],.chip.is-active{
+  background-color:var(--fg); color:var(--bg); border-color:var(--fg);
+}
+.chip[aria-pressed="true"] .chip__count,.chip[aria-checked="true"] .chip__count,.chip[aria-current="true"] .chip__count,.chip.is-active .chip__count{ color:inherit; }
+.chip:disabled,.chip[aria-disabled="true"]{ opacity:.45; cursor:not-allowed; pointer-events:none; }
+@media (hover:hover) and (pointer:fine){
+  .chip:not([aria-pressed="true"],[aria-checked="true"],[aria-current="true"],.is-active):hover{ background-color:var(--bg-alt); }
+}
+
+/* Segmentado (PT | EN, Automatico | Dia | Noite): trilho em pilula; alvo de 44 px por area de toque ampliada */
+.segmented{
+  display:inline-flex; align-items:center; gap:2px; padding:2px;
+  border:1.5px solid var(--line-input); border-radius:var(--r-pill); background-color:transparent;
+}
+.segmented__item{
+  position:relative; display:inline-flex; align-items:center; justify-content:center; min-height:36px; padding:0 var(--space-4);
+  border-radius:var(--r-pill); color:var(--fg); font-size:var(--fs-caption); font-weight:600; line-height:1.25; white-space:nowrap; cursor:pointer;
+  transition:background-color var(--dur-base) var(--ease-out),color var(--dur-base) var(--ease-out);
+}
+.segmented__item::before{ content:""; position:absolute; inset:-4px 0; }                 /* 36 + 8 = 44 px de alvo */
+.segmented__item[aria-pressed="true"],.segmented__item[aria-checked="true"],.segmented__item.is-active{ background-color:var(--fg); color:var(--bg); }
+@media (hover:hover) and (pointer:fine){
+  .segmented__item:not([aria-pressed="true"],[aria-checked="true"],.is-active):hover{ background-color:var(--bg-alt); }
+}
+.segmented--photo{ border-color:var(--fx-line-photo-soft); }
+.segmented--photo .segmented__item{ color:var(--on-photo); }
+.segmented--photo .segmented__item[aria-pressed="true"],.segmented--photo .segmented__item[aria-checked="true"],.segmented--photo .segmented__item.is-active{
+  background-color:var(--fx-light-bg); color:var(--fx-light-fg);
+}
+.segmented--photo :focus-visible{ outline-color:var(--marfim); box-shadow:0 0 0 5px rgb(var(--scrim) / .7); }
+@media (hover:hover) and (pointer:fine){
+  /* sobre foto o hover nao pode clarear o fundo (texto marfim sobre --bg-alt ficaria ilegivel): veu marfim de 14% */
+  .segmented--photo .segmented__item:not([aria-pressed="true"],[aria-checked="true"],.is-active):hover{
+    background-color:color-mix(in srgb,var(--on-photo) 14%,transparent);
+  }
+}
+
+/* ==========================================================================
+   4. Campo: rotulo SEMPRE acima; ajuda e erro abaixo. Placeholder termina em reticencias e mostra exemplo, nunca e rotulo.
+   <div class="field"><label class="field__label" for="x">Check-in</label>
+     <input class="field__input" id="x" aria-describedby="x-help x-err">
+     <p class="field__help" id="x-help">Ajuda</p><p class="field__error" id="x-err" role="alert" hidden>Erro</p></div>
+   Erro: aria-invalid="true" no controle (ou .is-invalid no .field) e remover [hidden] do .field__error.
+   ========================================================================== */
+.field{ display:grid; gap:var(--space-2); min-width:0; }
+.field__label{ font-size:var(--fs-caption); font-weight:600; line-height:1.3; color:var(--fg); }
+.field__input{
+  display:block; width:100%; min-width:0; min-height:var(--field-h); padding:0 var(--space-4);
+  border:1.5px solid var(--line-input); border-radius:var(--r-media); background-color:var(--surface); color:var(--fg);
+  font-family:var(--font-ui); font-size:var(--fs-btn); font-weight:400; line-height:1.4;
+  -webkit-appearance:none; appearance:none;
+  transition:border-color var(--dur-base) var(--ease-out),background-color var(--dur-base) var(--ease-out);
+}
+.field__input::placeholder{ color:var(--fg-3); opacity:1; }
+.field__input:focus-visible{ border-color:var(--fg); box-shadow:inset 0 0 0 .5px var(--fg),0 0 0 5px var(--bg); }
+input[type="date"].field__input,select.field__input{ -webkit-appearance:auto; appearance:auto; }
+input[type="date"].field__input::-webkit-calendar-picker-indicator{ cursor:pointer; }
+textarea.field__input{ padding-block:var(--space-4); min-height:calc(var(--field-h) * 2); resize:vertical; }
+.field__help{ margin:0; font-size:var(--fs-caption); line-height:1.45; color:var(--fg-3); }
+.field__error{ display:flex; align-items:flex-start; gap:var(--space-2); margin:0; font-size:var(--fs-caption); font-weight:500; line-height:1.45; color:var(--danger); }
+.field__error .icon{ margin-block-start:.15em; }
+.field__input[aria-invalid="true"],.field.is-invalid .field__input{ border-color:var(--danger); }
+.field__input[aria-invalid="true"]:focus-visible,.field.is-invalid .field__input:focus-visible{ box-shadow:inset 0 0 0 .5px var(--danger),0 0 0 5px var(--bg); }
+.field__input:disabled,.field__input[readonly]{ background-color:var(--bg-alt); border-color:var(--line); color:var(--fg-3); cursor:not-allowed; }
+@media (hover:hover) and (pointer:fine){ .field__input:not(:disabled,[readonly],[aria-invalid="true"]):hover{ border-color:var(--fg); } }
+
+/* Stepper de hospedes: input number (min=1 max=25) entre dois botoes de 44 px (type="button", aria-label)
+   <div class="stepper"><button class="stepper__btn" type="button" aria-label="Diminuir hóspedes"><x-icon name="minus"></x-icon></button>
+     <input class="stepper__input" type="number" inputmode="numeric" min="1" max="25" step="1" autocomplete="off" aria-label="…">
+     <button class="stepper__btn" type="button" aria-label="Aumentar hóspedes"><x-icon name="plus"></x-icon></button></div> */
+.stepper{
+  display:flex; align-items:center; gap:var(--space-1); min-height:var(--field-h); padding-inline:var(--space-1);
+  border:1.5px solid var(--line-input); border-radius:var(--r-media); background-color:var(--surface); color:var(--fg);
+  transition:border-color var(--dur-base) var(--ease-out);
+}
+.stepper__btn{
+  display:grid; place-items:center; flex:none; width:var(--hit); height:var(--hit); border-radius:50%; color:var(--fg); cursor:pointer;
+  transition:background-color var(--dur-base) var(--ease-out),transform var(--dur-fast) var(--ease-spring);
+}
+.stepper__btn:active{ transform:scale(.92); }
+.stepper__btn:disabled,.stepper__btn[aria-disabled="true"]{ opacity:.35; cursor:not-allowed; pointer-events:none; }
+.stepper__input{
+  flex:1; min-width:0; width:100%; height:var(--hit); padding:0; border:0; background:transparent; color:inherit; text-align:center;
+  font-size:var(--fs-btn); font-weight:600; font-variant-numeric:lining-nums tabular-nums;
+  -moz-appearance:textfield; appearance:textfield;
+}
+.stepper__input::-webkit-outer-spin-button,.stepper__input::-webkit-inner-spin-button{ -webkit-appearance:none; margin:0; }
+@media (hover:hover) and (pointer:fine){
+  .stepper__btn:not(:disabled,[aria-disabled="true"]):hover{ background-color:var(--bg-alt); }
+  .stepper:hover{ border-color:var(--fg); }
+}
+/* O anel de foco do input vai para o conjunto (o stepper todo e o campo) */
+@supports selector(:has(*)){
+  .stepper__input:focus-visible{ outline:none; box-shadow:none; }
+  .stepper:has(.stepper__input:focus-visible){ border-color:var(--fg); outline:2px solid var(--focus); outline-offset:3px; box-shadow:0 0 0 5px var(--bg); }
+}
+.stepper.is-invalid{ border-color:var(--danger); }
+@supports selector(:has(*)){ .stepper:has(.stepper__input[aria-invalid="true"]){ border-color:var(--danger); } }
+
+/* ==========================================================================
+   5. Acordeao (FAQ): <details name="faq"> exclusivo, sem caixa, so filete inferior.
+   <div class="accordion"><details class="accordion__item" name="faq" id="faq-pets" open>
+     <summary class="accordion__summary"><span>Pergunta</span><x-icon name="plus" size="24" class="accordion__icon"></x-icon></summary>
+     <div class="accordion__panel"><div class="accordion__inner"><p>Resposta</p></div></div></details></div>
+   Abre/fecha animado quando o navegador suporta ::details-content (0fr para 1fr, sem animar height); sem suporte, corte instantaneo.
+   ========================================================================== */
+.accordion__item{ border-block-end:1px solid var(--line); }
+.accordion__summary{
+  display:flex; align-items:center; justify-content:space-between; gap:var(--space-4); min-height:64px; padding-block:var(--space-4);
+  font-family:var(--font-display); font-size:var(--fs-lead); font-weight:500; line-height:1.3; color:var(--fg); cursor:pointer;
+}
+.accordion__summary > span{ min-width:0; text-wrap:balance; }
+.accordion__icon{ flex:none; transition:transform var(--dur-base) var(--ease-out); }
+.accordion__item[open] > .accordion__summary .accordion__icon{ transform:rotate(45deg); }
+.accordion__panel{ min-height:0; overflow:hidden; }
+.accordion__inner{ padding-block:0 var(--space-5); color:var(--fg-2); }
+@media (hover:hover) and (pointer:fine){ .accordion__summary:hover .accordion__icon{ color:var(--accent-text); } }
+@supports selector(::details-content){
+  .accordion__item::details-content{
+    display:grid; grid-template-rows:0fr; opacity:0;
+    transition:
+      grid-template-rows var(--dur-slow) var(--ease-glide),
+      opacity var(--dur-base) var(--ease-out),
+      content-visibility var(--dur-slow) allow-discrete;
+  }
+  .accordion__item[open]::details-content{ grid-template-rows:1fr; opacity:1; }
+}
+
+/* ==========================================================================
+   6. Imagem: .pic (saida da macro <x-picture> e de pictureHTML). Cor de espera inline (dominante do catalogo).
+   Fade de 600 ms ao decodificar (img.js marca .is-loaded). Sem JS a imagem aparece normalmente.
+   Modificadores: .pic--framed (raio 8 px), .pic--static (sem fade; hero e portal), style="--ar:3/2" (proporcao fixa, cover).
+   ========================================================================== */
+:root{ --fx-pic-wait:var(--ipe); }
+.pic{ position:relative; display:block; overflow:clip; background-color:var(--fx-pic-wait); aspect-ratio:var(--ar,auto); }
+.pic > img{
+  display:block; width:100%; height:100%; object-fit:cover;
+  transition:opacity var(--dur-pic) var(--ease-out);
+}
+.pic--framed{ border-radius:var(--r-media); }
+html.js .pic:not(.is-loaded,.pic--static) > img{ opacity:0; }
+.pic.is-error > img{ visibility:hidden; }
+html.js:not([data-ready]) .pic > img{ animation:k-failsafe 0s 4s both; }                 /* se o JS nao subir, mostra mesmo assim */
+@keyframes k-failsafe{ to{ opacity:1; } }
+
+/* ==========================================================================
+   7. Esqueleto (carregando). Pulso de opacidade; estatico em lite e none. Sem spinner circular.
+   <div class="skeleton skeleton--text" style="--w:60%"></div>  <div class="skeleton skeleton--block" style="--ar:3/2"></div>
+   ========================================================================== */
+.skeleton{ display:block; border-radius:var(--r-media); background-color:var(--bg-alt); }
+.skeleton--text{ width:var(--w,100%); height:1em; border-radius:var(--space-1); }
+.skeleton--block{ width:100%; aspect-ratio:var(--ar,3/2); }
+html[data-motion="full"] .skeleton{ animation:k-skeleton 1.6s var(--ease-inout) infinite; }
+@keyframes k-skeleton{ 50%{ opacity:.5; } }
+
+/* ==========================================================================
+   7b. Estado vazio ou de erro (tour, filmes, mapa, galeria sem resultado): diz o que houve e a correcao.
+   <div class="status status--error" role="alert"><x-icon name="warning-circle" size="24" class="status__icon"></x-icon>
+     <h3 class="status__title">Não foi possível carregar</h3><p class="status__text">Tente de novo.</p>
+     <div class="status__actions"><button class="btn btn--secondary btn--plain">…</button></div></div>
+   ========================================================================== */
+.status{ display:grid; justify-items:start; gap:var(--space-3); padding:var(--space-6); border-radius:var(--r-media); background-color:var(--bg-alt); color:var(--fg); }
+.status__icon{ color:var(--fg-2); }
+.status--error .status__icon{ color:var(--danger); }
+.status__title{ margin:0; font-family:var(--font-display); font-size:var(--fs-h4); font-weight:400; line-height:1.3; text-wrap:balance; }
+.status__text{ margin:0; color:var(--fg-2); }
+.status__actions{ display:flex; flex-wrap:wrap; gap:var(--space-3); margin-block-start:var(--space-2); }
+
+/* ==========================================================================
+   8. Link: sublinhado de 1.5 px em acento. Links de texto corrido sem classe herdam o mesmo estilo.
+   Externos: target="_blank" rel="noopener".
+   ========================================================================== */
+.link,:where(p,li,dd,figcaption,blockquote) a:not([class]){
+  color:var(--fg); text-decoration:underline; text-decoration-color:var(--accent); text-decoration-thickness:1.5px; text-underline-offset:.2em;
+  transition:color var(--dur-fast) var(--ease-out);
+}
+@media (hover:hover) and (pointer:fine){ .link:hover,:where(p,li,dd,figcaption,blockquote) a:not([class]):hover{ color:var(--accent-text); } }
+.link--quiet{ text-decoration-color:var(--line-input); }
+
+/* ==========================================================================
+   9. Revelacao (brief 11.3). Marcar: class="reveal" | data-reveal="up|fade|img|scrub". Grupo: data-reveal-group (stagger automatico).
+   Estado oculto so existe com html.js e data-motion full|lite: sem JS tudo aparece. Animacao com fill "backwards":
+   depois dela o elemento volta ao estilo natural (hover/transform proprios continuam livres). Nao usar em controles com transition propria.
+   full: opacity + translateY(16px); lite: so opacity (400 ms); none: nada. Atraso: --i (0 a 5) x --stagger, ou --reveal-delay.
+   ========================================================================== */
+html.js[data-motion="full"] :is(.reveal,[data-reveal]):not(.is-in),
+html.js[data-motion="lite"] :is(.reveal,[data-reveal]):not(.is-in){ opacity:0; }
+html.js:not([data-ready]) :is(.reveal,[data-reveal]){ animation:k-failsafe 0s 4s both; }
+
+html[data-motion="full"] :is(.reveal,[data-reveal]).is-in{
+  animation:k-reveal var(--dur-reveal) var(--ease-out) backwards;
+  animation-delay:var(--reveal-delay,calc(min(var(--i,0),5) * var(--stagger)));
+}
+html[data-motion="lite"] :is(.reveal,[data-reveal]).is-in{
+  animation:k-reveal-fade var(--dur-reveal) var(--ease-out) backwards;
+}
+html[data-motion="full"] [data-reveal="fade"].is-in{ animation-name:k-reveal-fade; }
+html[data-motion="full"] [data-reveal="img"].is-in{ animation-name:k-reveal-fade; }
+html[data-motion="full"] [data-reveal="img"].is-in img{
+  animation:k-reveal-zoom var(--dur-reveal) var(--ease-out) backwards;
+  animation-delay:var(--reveal-delay,calc(min(var(--i,0),5) * var(--stagger)));
+}
+@keyframes k-reveal{ from{ opacity:0; transform:translateY(var(--reveal-y)); } }
+@keyframes k-reveal-fade{ from{ opacity:0; } }
+@keyframes k-reveal-zoom{ from{ transform:scale(var(--reveal-scale)); } }
+
+/* Variante amarrada a rolagem, so onde ha animation-timeline (reveal.js nao observa estes elementos) */
+@supports (animation-timeline:view()){
+  html[data-motion="full"] [data-reveal="scrub"]{
+    animation:k-reveal-scrub linear both; animation-timeline:view(); animation-range:entry 0% entry 70%;
+  }
+}
+@keyframes k-reveal-scrub{ from{ opacity:0; transform:translateY(calc(var(--reveal-y) * 2)); } to{ opacity:1; transform:none; } }
+
+/* ==========================================================================
+   10. Forced colors: bordas visiveis nos controles
+   ========================================================================== */
+@media (forced-colors:active){
+  .btn,.chip,.segmented,.icon-btn,.field__input,.stepper{ border:1.5px solid ButtonText; }
+  .btn--primary,.chip[aria-pressed="true"],.segmented__item[aria-pressed="true"],.segmented__item[aria-checked="true"]{ background-color:Highlight; color:HighlightText; forced-color-adjust:none; }
+  .accordion__item{ border-block-end-color:CanvasText; }
+}

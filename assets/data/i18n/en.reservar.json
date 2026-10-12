@@ -1,0 +1,45 @@
+{
+  "reservar.eyebrow": "Booking",
+  "reservar.h2": "Choose the Dates of Your Stay.",
+  "reservar.sub": "Book direct on <span translate=\"no\">WhatsApp</span>, or through <span translate=\"no\">Airbnb</span> and <span translate=\"no\">VRBO</span>.",
+
+  "reservar.price.from": "from",
+  "reservar.price.amount": "<span class=\"stat__unit\">R$</span>&nbsp;13,000",
+  "reservar.price.per": "per night",
+
+  "reservar.guests.label": "Guests",
+  "reservar.guests.dec": "Decrease guests",
+  "reservar.guests.inc": "Increase guests",
+
+  "reservar.btn.send": "Send via <span translate=\"no\">WhatsApp</span>",
+  "reservar.btn.busy": "Opening <span translate=\"no\">WhatsApp</span>…",
+  "reservar.btn.airbnb": "View on <span translate=\"no\">Airbnb</span>",
+  "reservar.btn.vrbo": "View on <span translate=\"no\">VRBO</span>",
+  "reservar.or": "or",
+
+  "reservar.preview.summary": "Message Preview",
+  "reservar.preview.empty": "Fill in the dates and guests to see the message.",
+  "reservar.note": "You continue the conversation on <span translate=\"no\">WhatsApp</span>.",
+
+  "reservar.terms.label": "Booking terms",
+  "reservar.terms.rate": "Daily rates from R$&nbsp;13,000",
+  "reservar.terms.min": "4-night minimum",
+  "reservar.terms.guests": "Up to 25&nbsp;guests",
+  "reservar.terms.checkin": "Check-in at 12&nbsp;pm",
+  "reservar.terms.checkout": "Check-out at 12&nbsp;pm",
+  "reservar.terms.pets": "Pets: ask on <span translate=\"no\">WhatsApp</span>",
+  "reservar.terms.note": "Water, electricity and gas billed by use. Refundable <span translate=\"no\">PIX</span> deposit.",
+
+  "reservar.err.checkinEmpty": "Choose a check-in date.",
+  "reservar.err.checkinPast": "Choose a date from today on.",
+  "reservar.err.checkoutEmpty": "Choose a check-out date.",
+  "reservar.err.checkoutOrder": "Choose a check-out after check-in.",
+  "reservar.err.minNights": "The minimum stay is {min} nights. Choose a check-out on or after {date}.",
+  "reservar.err.guestsRange": "Enter 1 to {max} guests.",
+  "reservar.err.maxGuests": "The house limit is {max} guests.",
+
+  "reservar.estimate": "Reference: {n} nights, from {price}. Final price and availability confirmed on WhatsApp.",
+  "reservar.status.opened": "We opened WhatsApp with your message.",
+  "reservar.status.blocked": "Didn’t open? Tap here to open WhatsApp.",
+  "reservar.sr.guests": "Guests: {n}"
+}

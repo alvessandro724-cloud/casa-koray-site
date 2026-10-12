@@ -1,0 +1,11 @@
+{
+  "localizacao.h2": "How to Get Here.",
+  "localizacao.address": "<span translate=\"no\">Porto das Baleias</span> condominium, <span translate=\"no\">Praia do Forte</span>, Mata de São João, Bahia.",
+  "localizacao.coords.label": "Coordinates: ",
+  "localizacao.coords": "-12.5811867 / -38.0082405",
+  "localizacao.airport": "Salvador Airport: 1&nbsp;hour by car.",
+  "localizacao.note": "Google Maps loads only after you click.",
+  "localizacao.iframe": "Map of Casa Koray’s location",
+  "localizacao.error": "Couldn’t load the map.",
+  "localizacao.ready": "Map loaded."
+}

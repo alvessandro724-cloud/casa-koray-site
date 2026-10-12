@@ -1,0 +1,279 @@
+{
+  "_nota": "Fonte unica dos textos e dados das suites. suites.js le este arquivo; node tools/gen-suites.mjs regenera a lista sem JS em src/partials/070-suites.html e as chaves suites.l.* e suites.fb.* em assets/data/i18n/en.suites.json.",
+  "houseLimit": 25,
+  "includes": {
+    "pt": "Frigobar, TV, cortinas elétricas e climatização.",
+    "en": "Minibar, TV, electric curtains and air conditioning."
+  },
+  "includesBalcony": {
+    "pt": "Frigobar, TV, cortinas elétricas, climatização e varanda.",
+    "en": "Minibar, TV, electric curtains, air conditioning and balcony."
+  },
+  "suites": [
+    {
+      "n": 1,
+      "floor": "upper",
+      "view": "ocean",
+      "balcony": true,
+      "guests": 2,
+      "beds": {
+        "pt": "1 cama de casal",
+        "en": "1 double bed"
+      },
+      "photo": "IMG_7469",
+      "photo_confirmed": false
+    },
+    {
+      "n": 2,
+      "floor": "upper",
+      "view": "ocean",
+      "balcony": true,
+      "guests": 4,
+      "beds": {
+        "pt": "1 cama de casal + sofá-cama",
+        "en": "1 double bed + sofa bed"
+      },
+      "photo": "IMG_7444",
+      "photo_confirmed": false,
+      "photo_kind": "context",
+      "caption": {
+        "pt": "Na foto: a piscina superior, de frente para o mar, no mesmo andar.",
+        "en": "Pictured: the upper pool facing the sea, on the same floor."
+      }
+    },
+    {
+      "n": 3,
+      "floor": "upper",
+      "view": "ocean",
+      "balcony": true,
+      "guests": 4,
+      "beds": {
+        "pt": "1 cama de casal + sofá-cama",
+        "en": "1 double bed + sofa bed"
+      },
+      "photo": "IMG_7445",
+      "photo_confirmed": false,
+      "photo_kind": "context",
+      "caption": {
+        "pt": "Na foto: a varanda coberta do andar superior, de frente para o mar.",
+        "en": "Pictured: the upper floor's covered veranda, facing the sea."
+      }
+    },
+    {
+      "n": 4,
+      "floor": "ground",
+      "view": "ocean",
+      "balcony": false,
+      "guests": 2,
+      "beds": {
+        "pt": "1 cama de casal",
+        "en": "1 double bed"
+      },
+      "photo": "IMG_7466",
+      "photo_confirmed": false
+    },
+    {
+      "n": 5,
+      "floor": "ground",
+      "view": "ocean",
+      "balcony": false,
+      "guests": 4,
+      "beds": {
+        "pt": "2 camas de casal",
+        "en": "2 double beds"
+      },
+      "photo": "IMG_7452",
+      "photo_confirmed": false,
+      "photo_kind": "context",
+      "caption": {
+        "pt": "Na foto: espreguiçadeiras entre a piscina térrea e o mar.",
+        "en": "Pictured: loungers between the ground-floor pool and the sea."
+      }
+    },
+    {
+      "n": 6,
+      "floor": "upper",
+      "view": "inner",
+      "balcony": false,
+      "guests": 4,
+      "beds": {
+        "pt": "2 camas de casal",
+        "en": "2 double beds"
+      },
+      "photo": "IMG_7470",
+      "photo_confirmed": false
+    },
+    {
+      "n": 7,
+      "floor": "upper",
+      "view": "inner",
+      "balcony": false,
+      "guests": 4,
+      "beds": {
+        "pt": "1 cama de casal + bicama",
+        "en": "1 double bed + trundle bed"
+      },
+      "photo": "IMG_7459",
+      "photo_confirmed": false,
+      "photo_kind": "context",
+      "caption": {
+        "pt": "Na foto: a sala de estar do andar superior.",
+        "en": "Pictured: the upper floor living room."
+      }
+    },
+    {
+      "n": 8,
+      "floor": "ground",
+      "view": "inner",
+      "balcony": false,
+      "guests": 4,
+      "beds": {
+        "pt": "2 camas de casal",
+        "en": "2 double beds"
+      },
+      "photo": "IMG_7467",
+      "photo_confirmed": false
+    },
+    {
+      "n": 9,
+      "floor": "ground",
+      "view": "inner",
+      "balcony": false,
+      "guests": 4,
+      "beds": {
+        "pt": "1 cama de casal + bicama",
+        "en": "1 double bed + trundle bed"
+      },
+      "photo": "IMG_7436",
+      "photo_confirmed": false,
+      "photo_kind": "context",
+      "caption": {
+        "pt": "Na foto: o jardim tropical da entrada.",
+        "en": "Pictured: the tropical garden at the entrance."
+      }
+    },
+    {
+      "n": 10,
+      "floor": "ground",
+      "view": "inner",
+      "balcony": false,
+      "guests": 4,
+      "beds": {
+        "pt": "2 camas de casal",
+        "en": "2 double beds"
+      },
+      "photo": "IMG_7450",
+      "photo_confirmed": false,
+      "photo_kind": "context",
+      "caption": {
+        "pt": "Na foto: o jardim tropical com mesa ao ar livre.",
+        "en": "Pictured: the tropical garden with outdoor dining."
+      }
+    }
+  ],
+  "bathroomPhoto": "IMG_7471",
+  "photoAlt": {
+    "IMG_7469": {
+      "pt": "Suíte com piso de madeira, painel com TV e porta de vidro para varanda com palmeiras e mar ao fundo.",
+      "en": "Suite with wooden floor, TV panel and a glass door to a balcony with palm trees and the sea beyond."
+    },
+    "IMG_7466": {
+      "pt": "Suíte com parede azul texturizada, piso de madeira e porta de correr abrindo para terraço, piscina e mar.",
+      "en": "Suite with a textured blue wall, wooden floor and a sliding door opening to the terrace, pool and sea."
+    },
+    "IMG_7470": {
+      "pt": "Suíte com papel de parede de folhas, painel de madeira com TV e porta de vidro com vista para um coqueiro.",
+      "en": "Suite with leaf-print wallpaper, wooden TV panel and a glass door looking out to a coconut palm."
+    },
+    "IMG_7467": {
+      "pt": "Suíte com parede cinza com quadros artesanais, piso de madeira e folhagens tropicais em primeiro plano.",
+      "en": "Suite with a gray wall of handmade artworks, wooden floor and tropical foliage in the foreground."
+    }
+  },
+  "labels": {
+    "word": {
+      "pt": "Suíte",
+      "en": "Suite"
+    },
+    "choose": {
+      "pt": "Escolha a suíte",
+      "en": "Choose a suite"
+    },
+    "rowUpper": {
+      "pt": "Andar superior",
+      "en": "Upper floor"
+    },
+    "rowGround": {
+      "pt": "Térreo",
+      "en": "Ground floor"
+    },
+    "groupOcean": {
+      "pt": "Frente-mar",
+      "en": "Ocean-front"
+    },
+    "groupInner": {
+      "pt": "Vista interna",
+      "en": "Inner view"
+    },
+    "floor": {
+      "pt": "Andar",
+      "en": "Floor"
+    },
+    "view": {
+      "pt": "Vista",
+      "en": "View"
+    },
+    "guests": {
+      "pt": "Hóspedes",
+      "en": "Guests"
+    },
+    "beds": {
+      "pt": "Camas",
+      "en": "Beds"
+    },
+    "floorUpper": {
+      "pt": "Superior",
+      "en": "Upper"
+    },
+    "floorGround": {
+      "pt": "Térreo",
+      "en": "Ground"
+    },
+    "viewOcean": {
+      "pt": "Frente-mar",
+      "en": "Ocean-front"
+    },
+    "viewOceanBalcony": {
+      "pt": "Frente-mar, com varanda",
+      "en": "Ocean-front, with balcony"
+    },
+    "viewInner": {
+      "pt": "Vista interna",
+      "en": "Inner view"
+    },
+    "capUpperOcean": {
+      "pt": "Foto ilustrativa de uma suíte frente-mar do andar superior.",
+      "en": "Illustrative photo of an upper-floor ocean-front suite."
+    },
+    "capGroundOcean": {
+      "pt": "Foto ilustrativa de uma suíte frente-mar do térreo.",
+      "en": "Illustrative photo of a ground-floor ocean-front suite."
+    },
+    "capUpperInner": {
+      "pt": "Foto ilustrativa de uma suíte com vista interna do andar superior.",
+      "en": "Illustrative photo of an upper-floor inner-view suite."
+    },
+    "capGroundInner": {
+      "pt": "Foto ilustrativa de uma suíte com vista interna do térreo.",
+      "en": "Illustrative photo of a ground-floor inner-view suite."
+    },
+    "limit": {
+      "pt": "Limite da casa: {n} hóspedes.",
+      "en": "House limit: {n} guests."
+    },
+    "bath": {
+      "pt": "Um dos 13 banheiros da casa.",
+      "en": "One of the house’s 13 bathrooms."
+    }
+  }
+}

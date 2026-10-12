@@ -1,0 +1,23 @@
+{
+  "galeria.h2": "30 Photos, One House.",
+  "galeria.lead": "Pick a photo to enlarge.",
+  "galeria.unit": "photos",
+  "galeria.filters": "Filter photos by category",
+  "galeria.f.todas": "All",
+  "galeria.f.externas": "Outdoors",
+  "galeria.f.noite": "Night",
+  "galeria.f.salas": "Living, Gourmet and Cinema",
+  "galeria.f.suites": "Suites",
+  "galeria.enlarge": "Enlarge photo",
+  "galeria.empty": "No photos in this filter.",
+  "galeria.empty.reset": "Show All",
+
+  "galeria.tile.IMG_7463": "Enlarge photo: A long table for big gatherings",
+  "galeria.tile.IMG_7456": "Enlarge photo: Dining table open to the garden",
+  "galeria.tile.IMG_7445": "Enlarge photo: Covered terrace facing the open sea",
+  "galeria.tile.IMG_7457": "Enlarge photo: A dining table facing the sea",
+  "galeria.tile.IMG_7438": "Enlarge photo: Timber walkway through tropical gardens",
+  "galeria.tile.IMG_7429": "Enlarge photo: House, pool and garden from above",
+  "galeria.tile.IMG_7461": "Enlarge photo: Upper gourmet space facing the sea",
+  "galeria.tile.IMG_7462": "Enlarge photo: Gourmet and living areas side by side"
+}

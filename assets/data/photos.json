@@ -1,0 +1,1193 @@
+{
+  "version": 1,
+  "imgBase": "assets/img/",
+  "optBase": "assets/img/opt/",
+  "photos": [
+    {
+      "id": "IMG_7424",
+      "w": 1280,
+      "h": 854,
+      "alt": {
+        "pt": "Sala de cinema com tela de projeção, poltronas reclináveis, mantas dobradas e forro de madeira ripada com fita de LED.",
+        "en": "Home cinema with large projection screen, recliner seats, folded blankets and slatted wood ceiling with LED strip."
+      },
+      "caption": {
+        "pt": "Cinema privativo para toda a turma",
+        "en": "A private cinema for the whole group"
+      },
+      "focal": [
+        62,
+        50
+      ],
+      "dominant": "#1b1917",
+      "palette": [
+        "#1b1917",
+        "#6f5f50",
+        "#b88555"
+      ],
+      "cat": "salas",
+      "area": "cinema",
+      "time": "interior",
+      "xl": false,
+      "quality": 4,
+      "widths": [
+        480,
+        720,
+        960,
+        1280
+      ],
+      "uses": [
+        "amenity-card",
+        "gallery-large",
+        "tour-hotspot"
+      ]
+    },
+    {
+      "id": "IMG_7429",
+      "w": 1280,
+      "h": 719,
+      "alt": {
+        "pt": "Vista elevada da casa de dois andares com piscina de borda infinita, lounge rebaixado, terraço coberto, gramado e coqueiros.",
+        "en": "Elevated view of the two-story house with infinity pool, sunken lounge, covered terrace, lawn and coconut palms."
+      },
+      "caption": {
+        "pt": "Casa, piscina e jardim vistos do alto",
+        "en": "House, pool and garden from above"
+      },
+      "focal": [
+        50,
+        58
+      ],
+      "dominant": "#4c97d8",
+      "palette": [
+        "#4c97d8",
+        "#79a63f",
+        "#b46f3d"
+      ],
+      "cat": "externas",
+      "area": "exterior-wide",
+      "time": "day",
+      "xl": false,
+      "quality": 4,
+      "widths": [
+        480,
+        720,
+        960,
+        1280
+      ],
+      "uses": [
+        "hero-alt",
+        "gallery-large",
+        "tour-hotspot",
+        "og-image"
+      ]
+    },
+    {
+      "id": "IMG_7430",
+      "w": 2560,
+      "h": 1709,
+      "alt": {
+        "pt": "Casa de dois andares na hora azul, com piscina de borda infinita, lounge rebaixado com lareira e beirais de madeira iluminados.",
+        "en": "Two-story house at blue hour with an infinity pool, a sunken fire lounge and softly lit wooden eaves."
+      },
+      "caption": {
+        "pt": "Hora azul na Casa Koray",
+        "en": "Blue hour at Casa Koray"
+      },
+      "focal": [
+        46,
+        50
+      ],
+      "dominant": "#16508f",
+      "palette": [
+        "#16508f",
+        "#a9693a",
+        "#3d8a32"
+      ],
+      "cat": "noite",
+      "area": "exterior-wide",
+      "time": "blue-hour",
+      "xl": true,
+      "quality": 5,
+      "widths": [
+        640,
+        1280,
+        1920,
+        2560
+      ],
+      "uses": [
+        "hero",
+        "gallery-large",
+        "og-image",
+        "tour-hotspot"
+      ]
+    },
+    {
+      "id": "IMG_7431",
+      "w": 1280,
+      "h": 719,
+      "alt": {
+        "pt": "Vista aérea da casa de dois andares com piscina de borda infinita, piscina superior de vidro, deck claro e gramado entre coqueiros",
+        "en": "Aerial view of the two-storey house with infinity pool, glass-sided upper pool, pale deck and lawn among coconut palms"
+      },
+      "caption": {
+        "pt": "A casa vista do alto",
+        "en": "The house from above"
+      },
+      "focal": [
+        50,
+        52
+      ],
+      "dominant": "#2b72b0",
+      "palette": [
+        "#2b72b0",
+        "#d9d3c6",
+        "#4d8a2c"
+      ],
+      "cat": "externas",
+      "area": "exterior-wide",
+      "time": "day",
+      "xl": false,
+      "quality": 4,
+      "widths": [
+        480,
+        720,
+        960,
+        1280
+      ],
+      "uses": [
+        "hero-alt",
+        "gallery-large",
+        "og-image",
+        "tour-hotspot"
+      ]
+    },
+    {
+      "id": "IMG_7436",
+      "w": 1280,
+      "h": 1266,
+      "alt": {
+        "pt": "Entrada de madeira e vidro entre duas palmeiras, jardim tropical e gramado; no fundo, o mar aparece através da casa.",
+        "en": "Wood and glass entrance framed by two palms, tropical garden and lawn, with the sea glimpsed through the house."
+      },
+      "caption": {
+        "pt": "Palmeiras emolduram a entrada",
+        "en": "Palms frame the entrance"
+      },
+      "focal": [
+        50,
+        58
+      ],
+      "dominant": "#1255a6",
+      "palette": [
+        "#1255a6",
+        "#c2823c",
+        "#5d9a42"
+      ],
+      "cat": "externas",
+      "area": "facade-garden",
+      "time": "day",
+      "xl": false,
+      "quality": 4,
+      "widths": [
+        480,
+        720,
+        960,
+        1280
+      ],
+      "uses": [
+        "gallery",
+        "tour-hotspot",
+        "texture-ref"
+      ]
+    },
+    {
+      "id": "IMG_7438",
+      "w": 854,
+      "h": 1280,
+      "alt": {
+        "pt": "Passarela de deck entre pilares de madeira ripada e plantas tropicais, com sala de jantar e mar ao fundo.",
+        "en": "Wooden deck walkway between slatted timber pillars and tropical plants, with a dining room and the sea beyond."
+      },
+      "caption": {
+        "pt": "Passagem de madeira entre jardins tropicais",
+        "en": "Timber walkway through tropical gardens"
+      },
+      "focal": [
+        52,
+        48
+      ],
+      "dominant": "#b97a4b",
+      "palette": [
+        "#b97a4b",
+        "#3f6a2f",
+        "#e6dfd0"
+      ],
+      "cat": "externas",
+      "area": "facade-garden",
+      "time": "day",
+      "xl": false,
+      "quality": 4,
+      "widths": [
+        480,
+        720,
+        854
+      ],
+      "uses": [
+        "gallery-large",
+        "tour-hotspot",
+        "texture-ref"
+      ]
+    },
+    {
+      "id": "IMG_7440",
+      "w": 1280,
+      "h": 962,
+      "alt": {
+        "pt": "Piscina superior iluminada ao anoitecer, cozinha gourmet sob forro de madeira, piscina térrea e coqueiros diante do mar escuro.",
+        "en": "Lit upper pool at dusk, gourmet kitchen under a wooden ceiling, lower pool and palms facing the dark sea."
+      },
+      "caption": {
+        "pt": "Noite na piscina superior",
+        "en": "Night by the upper pool"
+      },
+      "focal": [
+        56,
+        56
+      ],
+      "dominant": "#0f2a5e",
+      "palette": [
+        "#0f2a5e",
+        "#2b6fd0",
+        "#b7703a"
+      ],
+      "cat": "noite",
+      "area": "pool-upper",
+      "time": "blue-hour",
+      "xl": false,
+      "quality": 5,
+      "widths": [
+        480,
+        720,
+        960,
+        1280
+      ],
+      "uses": [
+        "hero-alt",
+        "gallery-large",
+        "amenity-card",
+        "tour-hotspot",
+        "og-image"
+      ]
+    },
+    {
+      "id": "IMG_7441",
+      "w": 2560,
+      "h": 1709,
+      "alt": {
+        "pt": "Piscina superior com hidromassagem e duas espreguiçadeiras, guarda-corpo de vidro, coqueiros, recife e mar turquesa ao fundo.",
+        "en": "Upper pool with jets and two sun loungers, glass railing, coconut palms, exposed reef and turquoise sea beyond."
+      },
+      "caption": {
+        "pt": "Piscina superior, mar à frente",
+        "en": "Upper pool, sea ahead"
+      },
+      "focal": [
+        50,
+        52
+      ],
+      "dominant": "#2f8fd8",
+      "palette": [
+        "#2f8fd8",
+        "#3cc4c2",
+        "#5b8a3a"
+      ],
+      "cat": "externas",
+      "area": "pool-upper",
+      "time": "day",
+      "xl": true,
+      "quality": 5,
+      "widths": [
+        640,
+        1280,
+        1920,
+        2560
+      ],
+      "uses": [
+        "hero-alt",
+        "gallery-large",
+        "amenity-card",
+        "tour-hotspot",
+        "og-image"
+      ]
+    },
+    {
+      "id": "IMG_7443",
+      "w": 1280,
+      "h": 854,
+      "alt": {
+        "pt": "Varanda sob forro de madeira com mesa redonda e ombrelone, piscina de borda de vidro, coqueiros, recifes e mar turquesa.",
+        "en": "Veranda under a wood ceiling with a round table and parasol, glass-edged pool, palms, reef and turquoise sea."
+      },
+      "caption": {
+        "pt": "Mesa na varanda, mar à frente",
+        "en": "Veranda table with the sea ahead"
+      },
+      "focal": [
+        50,
+        55
+      ],
+      "dominant": "#2e90d6",
+      "palette": [
+        "#2e90d6",
+        "#25a8a3",
+        "#d6d0c6"
+      ],
+      "cat": "externas",
+      "area": "pool-upper",
+      "time": "day",
+      "xl": false,
+      "quality": 5,
+      "widths": [
+        480,
+        720,
+        960,
+        1280
+      ],
+      "uses": [
+        "hero-alt",
+        "gallery-large",
+        "amenity-card",
+        "tour-hotspot",
+        "og-image"
+      ]
+    },
+    {
+      "id": "IMG_7444",
+      "w": 1280,
+      "h": 854,
+      "alt": {
+        "pt": "Piscina de azulejos verde-água com guarda-corpo de vidro, espreguiçadeiras, fileira de coqueiros e mar turquesa ao horizonte",
+        "en": "Aqua-tiled pool behind a glass railing with sun loungers, a row of coconut palms and turquoise sea at the horizon"
+      },
+      "caption": {
+        "pt": "Piscina superior de frente para o mar",
+        "en": "Upper pool facing the turquoise sea"
+      },
+      "focal": [
+        55,
+        52
+      ],
+      "dominant": "#2a7fd2",
+      "palette": [
+        "#2a7fd2",
+        "#34c0b2",
+        "#10243d"
+      ],
+      "cat": "externas",
+      "area": "pool-upper",
+      "time": "day",
+      "xl": false,
+      "quality": 5,
+      "widths": [
+        480,
+        720,
+        960,
+        1280
+      ],
+      "uses": [
+        "hero-alt",
+        "gallery-large",
+        "amenity-card",
+        "og-image",
+        "tour-hotspot"
+      ]
+    },
+    {
+      "id": "IMG_7445",
+      "w": 1280,
+      "h": 854,
+      "alt": {
+        "pt": "Varanda coberta com forro de madeira, sofás trançados e balanço suspenso, com coqueiros, piscina e mar ao fundo.",
+        "en": "Covered terrace with wooden ceiling, woven sofas and a hanging chair, with palm trees, a pool and the ocean beyond."
+      },
+      "caption": {
+        "pt": "Varanda coberta com o mar à frente",
+        "en": "Covered terrace facing the open sea"
+      },
+      "focal": [
+        62,
+        48
+      ],
+      "dominant": "#3b8fc4",
+      "palette": [
+        "#3b8fc4",
+        "#b88a5a",
+        "#7a6858"
+      ],
+      "cat": "externas",
+      "area": "balcony-view",
+      "time": "day",
+      "xl": false,
+      "quality": 5,
+      "widths": [
+        480,
+        720,
+        960,
+        1280
+      ],
+      "uses": [
+        "hero-alt",
+        "gallery-large",
+        "amenity-card",
+        "og-image",
+        "tour-hotspot"
+      ]
+    },
+    {
+      "id": "IMG_7447",
+      "w": 1280,
+      "h": 854,
+      "alt": {
+        "pt": "Piscina iluminada de borda infinita na hora azul, com espreguiçadeiras, coqueiros, gramado, o mar ao fundo e a casa à direita",
+        "en": "Illuminated infinity pool at blue hour with sun loungers, coconut palms, lawn, the sea beyond and the house on the right"
+      },
+      "caption": {
+        "pt": "Piscina de borda infinita ao anoitecer",
+        "en": "Infinity pool at dusk"
+      },
+      "focal": [
+        45,
+        58
+      ],
+      "dominant": "#1d6fb8",
+      "palette": [
+        "#1d6fb8",
+        "#3b7a2d",
+        "#cfc3ae"
+      ],
+      "cat": "noite",
+      "area": "pool-ground",
+      "time": "blue-hour",
+      "xl": false,
+      "quality": 4,
+      "widths": [
+        480,
+        720,
+        960,
+        1280
+      ],
+      "uses": [
+        "hero-alt",
+        "gallery-large",
+        "og-image",
+        "tour-hotspot"
+      ]
+    },
+    {
+      "id": "IMG_7448",
+      "w": 1280,
+      "h": 931,
+      "alt": {
+        "pt": "Lareira acesa em deck de madeira com banco de almofadas coloridas, piscina iluminada, gramado, coqueiros e mar na hora azul.",
+        "en": "Lit fire pit on a wood deck with a bench of colorful cushions, glowing pool, lawn, palms and sea at blue hour."
+      },
+      "caption": {
+        "pt": "Fogo, piscina e mar ao anoitecer",
+        "en": "Fire, pool and sea at dusk"
+      },
+      "focal": [
+        62,
+        66
+      ],
+      "dominant": "#0f4278",
+      "palette": [
+        "#0f4278",
+        "#2fb6d6",
+        "#3d7a2a"
+      ],
+      "cat": "noite",
+      "area": "fire-lounge",
+      "time": "blue-hour",
+      "xl": false,
+      "quality": 4,
+      "widths": [
+        480,
+        720,
+        960,
+        1280
+      ],
+      "uses": [
+        "hero-alt",
+        "gallery-large",
+        "amenity-card",
+        "og-image",
+        "tour-hotspot"
+      ]
+    },
+    {
+      "id": "IMG_7450",
+      "w": 1280,
+      "h": 854,
+      "alt": {
+        "pt": "Coqueiros e bromélias em primeiro plano, mesa de jantar externa no deck e a casa de madeira e vidro ao fundo.",
+        "en": "Coconut palms and bromeliads in the foreground, outdoor dining table on the deck and the wood-and-glass house behind."
+      },
+      "caption": {
+        "pt": "Jardim tropical diante da casa",
+        "en": "Tropical garden before the house"
+      },
+      "focal": [
+        48,
+        58
+      ],
+      "dominant": "#3f7d2f",
+      "palette": [
+        "#3f7d2f",
+        "#b9c453",
+        "#b9804f"
+      ],
+      "cat": "externas",
+      "area": "facade-garden",
+      "time": "day",
+      "xl": false,
+      "quality": 4,
+      "widths": [
+        480,
+        720,
+        960,
+        1280
+      ],
+      "uses": [
+        "gallery",
+        "tour-hotspot",
+        "texture-ref"
+      ]
+    },
+    {
+      "id": "IMG_7452",
+      "w": 1280,
+      "h": 854,
+      "alt": {
+        "pt": "Duas espreguiçadeiras terracota ao lado da piscina de águas escuras, com gramado, coqueiros e mar ao fundo.",
+        "en": "Two terracotta loungers beside the dark-water pool, with lawn, coconut palms and the sea beyond."
+      },
+      "caption": {
+        "pt": "Espreguiçadeiras entre a piscina e o mar",
+        "en": "Loungers between the pool and the sea"
+      },
+      "focal": [
+        40,
+        60
+      ],
+      "dominant": "#2b82bd",
+      "palette": [
+        "#2b82bd",
+        "#62a83e",
+        "#d6cfc2"
+      ],
+      "cat": "externas",
+      "area": "pool-ground",
+      "time": "day",
+      "xl": false,
+      "quality": 5,
+      "widths": [
+        480,
+        720,
+        960,
+        1280
+      ],
+      "uses": [
+        "hero-alt",
+        "gallery-large",
+        "amenity-card",
+        "og-image"
+      ]
+    },
+    {
+      "id": "IMG_7456",
+      "w": 854,
+      "h": 1280,
+      "alt": {
+        "pt": "Mesa de jantar longa com tampo claro e cadeiras estofadas sob forro de madeira, com portas de vidro para o jardim.",
+        "en": "Long dining table with a pale top and upholstered chairs under a wooden ceiling, glass doors opening to the garden."
+      },
+      "caption": {
+        "pt": "Mesa de jantar aberta para o jardim",
+        "en": "Dining table open to the garden"
+      },
+      "focal": [
+        50,
+        52
+      ],
+      "dominant": "#b5784a",
+      "palette": [
+        "#b5784a",
+        "#c9ccc8",
+        "#4a7a3a"
+      ],
+      "cat": "salas",
+      "area": "living-dining",
+      "time": "interior",
+      "xl": false,
+      "quality": 4,
+      "widths": [
+        480,
+        720,
+        854
+      ],
+      "uses": [
+        "gallery",
+        "amenity-card",
+        "tour-hotspot"
+      ]
+    },
+    {
+      "id": "IMG_7457",
+      "w": 1280,
+      "h": 854,
+      "alt": {
+        "pt": "Mesa de jantar com tampo claro e cadeiras estofadas sob forro de madeira, aberta para a piscina, coqueiros e o mar.",
+        "en": "Dining table with pale top and upholstered chairs under a wood ceiling, open to the pool, palms and the sea."
+      },
+      "caption": {
+        "pt": "Mesa de jantar diante do mar",
+        "en": "A dining table facing the sea"
+      },
+      "focal": [
+        54,
+        48
+      ],
+      "dominant": "#b4672f",
+      "palette": [
+        "#b4672f",
+        "#2a8fa3",
+        "#cdbba2"
+      ],
+      "cat": "salas",
+      "area": "living-dining",
+      "time": "interior",
+      "xl": false,
+      "quality": 5,
+      "widths": [
+        480,
+        720,
+        960,
+        1280
+      ],
+      "uses": [
+        "gallery-large",
+        "amenity-card",
+        "tour-hotspot"
+      ]
+    },
+    {
+      "id": "IMG_7458",
+      "w": 1280,
+      "h": 854,
+      "alt": {
+        "pt": "Mesa longa de tampo veiado claro com cadeiras estofadas sob forro de madeira; cozinha de pedra ao fundo e jardim à direita",
+        "en": "Long pale-veined dining table with upholstered chairs under a wood ceiling; stone-clad kitchen behind and garden at right"
+      },
+      "caption": {
+        "pt": "Jantar gourmet sob forro de madeira",
+        "en": "Gourmet dining beneath a timber ceiling"
+      },
+      "focal": [
+        50,
+        50
+      ],
+      "dominant": "#8f4524",
+      "palette": [
+        "#8f4524",
+        "#b9bab6",
+        "#d6d7d3"
+      ],
+      "cat": "salas",
+      "area": "gourmet-ground",
+      "time": "day",
+      "xl": false,
+      "quality": 5,
+      "widths": [
+        480,
+        720,
+        960,
+        1280
+      ],
+      "uses": [
+        "gallery-large",
+        "amenity-card",
+        "tour-hotspot",
+        "og-image"
+      ]
+    },
+    {
+      "id": "IMG_7459",
+      "w": 1280,
+      "h": 855,
+      "alt": {
+        "pt": "Sala ampla com sofá claro, almofadas coloridas, painel de madeira com TV e portas de vidro para o jardim.",
+        "en": "Spacious living room with a light sectional sofa, colorful cushions, wood-paneled TV wall and glass doors to the garden."
+      },
+      "caption": {
+        "pt": "Sala de estar em tons de madeira",
+        "en": "Living room in warm wood tones"
+      },
+      "focal": [
+        45,
+        58
+      ],
+      "dominant": "#dcd6ca",
+      "palette": [
+        "#dcd6ca",
+        "#b27c4c",
+        "#4e7c3b"
+      ],
+      "cat": "salas",
+      "area": "living-dining",
+      "time": "interior",
+      "xl": false,
+      "quality": 4,
+      "widths": [
+        480,
+        720,
+        960,
+        1280
+      ],
+      "uses": [
+        "gallery-large",
+        "tour-hotspot",
+        "texture-ref"
+      ]
+    },
+    {
+      "id": "IMG_7460",
+      "w": 1280,
+      "h": 854,
+      "alt": {
+        "pt": "Sala de estar com sofá branco, painel de madeira com TV, nichos com arandelas e sala de jantar ao fundo.",
+        "en": "Living room with white sofa, wood panel with TV, lit niches and dining area in the background."
+      },
+      "caption": {
+        "pt": "Sala ampla, madeira e tons de areia",
+        "en": "Wood and sand-toned living room"
+      },
+      "focal": [
+        58,
+        52
+      ],
+      "dominant": "#dcdcd8",
+      "palette": [
+        "#dcdcd8",
+        "#c4905a",
+        "#bdbfb7"
+      ],
+      "cat": "salas",
+      "area": "living-dining",
+      "time": "interior",
+      "xl": false,
+      "quality": 4,
+      "widths": [
+        480,
+        720,
+        960,
+        1280
+      ],
+      "uses": [
+        "gallery-large",
+        "tour-hotspot",
+        "texture-ref"
+      ]
+    },
+    {
+      "id": "IMG_7461",
+      "w": 1280,
+      "h": 854,
+      "alt": {
+        "pt": "Área gourmet com forro de madeira, churrasqueira em vitrine, mesa de madeira com cadeiras trançadas e vista do mar entre palmeiras",
+        "en": "Covered gourmet area with wood ceiling, glass-fronted grill, timber table, woven chairs and a sea view between palm trees"
+      },
+      "caption": {
+        "pt": "Gourmet superior com vista para o mar",
+        "en": "Upper gourmet space facing the sea"
+      },
+      "focal": [
+        55,
+        58
+      ],
+      "dominant": "#a2653a",
+      "palette": [
+        "#a2653a",
+        "#c4c4c1",
+        "#2a2d2f"
+      ],
+      "cat": "salas",
+      "area": "gourmet-upper",
+      "time": "day",
+      "xl": false,
+      "quality": 4,
+      "widths": [
+        480,
+        720,
+        960,
+        1280
+      ],
+      "uses": [
+        "gallery-large",
+        "amenity-card",
+        "tour-hotspot"
+      ]
+    },
+    {
+      "id": "IMG_7462",
+      "w": 1280,
+      "h": 854,
+      "alt": {
+        "pt": "Espaço gourmet com forro de madeira e churrasqueira à esquerda, divisória de ripas e sala com poltronas azul-claras e tapete verde.",
+        "en": "Gourmet area with wood ceiling and grill at left, slatted divider, and living room with pale blue armchairs and green rug."
+      },
+      "caption": {
+        "pt": "Gourmet e sala integrados",
+        "en": "Gourmet and living, seamlessly connected"
+      },
+      "focal": [
+        50,
+        55
+      ],
+      "dominant": "#a3622f",
+      "palette": [
+        "#a3622f",
+        "#2e7d6f",
+        "#c3c3be"
+      ],
+      "cat": "salas",
+      "area": "gourmet-upper",
+      "time": "interior",
+      "xl": false,
+      "quality": 5,
+      "widths": [
+        480,
+        720,
+        960,
+        1280
+      ],
+      "uses": [
+        "gallery-large",
+        "tour-hotspot",
+        "amenity-card"
+      ]
+    },
+    {
+      "id": "IMG_7463",
+      "w": 1246,
+      "h": 1280,
+      "alt": {
+        "pt": "Mesa de jantar retangular com tampo de pedra, cadeiras de madeira com estofado claro, pendentes e parede amadeirada.",
+        "en": "Long rectangular dining table with stone top, pale upholstered wooden chairs, wooden pendants and wood-panelled wall."
+      },
+      "caption": {
+        "pt": "Mesa longa para grandes encontros",
+        "en": "A long table for big gatherings"
+      },
+      "focal": [
+        52,
+        58
+      ],
+      "dominant": "#d6bfab",
+      "palette": [
+        "#d6bfab",
+        "#c8884a",
+        "#ece8e1"
+      ],
+      "cat": "salas",
+      "area": "living-dining",
+      "time": "interior",
+      "xl": false,
+      "quality": 4,
+      "widths": [
+        480,
+        720,
+        960,
+        1246
+      ],
+      "uses": [
+        "gallery",
+        "tour-hotspot",
+        "texture-ref"
+      ]
+    },
+    {
+      "id": "IMG_7464",
+      "w": 1280,
+      "h": 854,
+      "alt": {
+        "pt": "Sala integrada com parede ripada de madeira, piso claro polido, planta com flores rosa, mesa de jantar e poltronas.",
+        "en": "Open-plan living and dining with slatted wood wall, polished pale floor, pink-flowering plant, dining table and armchairs."
+      },
+      "caption": {
+        "pt": "Luz dourada, flores e sala integrada",
+        "en": "Golden light, flowers and open-plan living"
+      },
+      "focal": [
+        46,
+        45
+      ],
+      "dominant": "#e3d8c6",
+      "palette": [
+        "#e3d8c6",
+        "#b27d4d",
+        "#2f7a55"
+      ],
+      "cat": "salas",
+      "area": "living-dining",
+      "time": "golden-hour",
+      "xl": false,
+      "quality": 5,
+      "widths": [
+        480,
+        720,
+        960,
+        1280
+      ],
+      "uses": [
+        "gallery-large",
+        "tour-hotspot",
+        "hero-alt"
+      ]
+    },
+    {
+      "id": "IMG_7465",
+      "w": 1280,
+      "h": 854,
+      "alt": {
+        "pt": "Sala de estar e jantar ampla com sofá creme, tapete verde, poltronas de madeira e varanda aberta para o mar turquesa",
+        "en": "Spacious living and dining room with cream sofa, green rug, wooden-armed chairs and a terrace open to the turquoise sea"
+      },
+      "caption": {
+        "pt": "Sala ampla aberta para o mar",
+        "en": "Open living room facing the sea"
+      },
+      "focal": [
+        58,
+        62
+      ],
+      "dominant": "#ece3d2",
+      "palette": [
+        "#ece3d2",
+        "#3f8f6c",
+        "#c8a77d"
+      ],
+      "cat": "salas",
+      "area": "living-dining",
+      "time": "interior",
+      "xl": false,
+      "quality": 4,
+      "widths": [
+        480,
+        720,
+        960,
+        1280
+      ],
+      "uses": [
+        "gallery-large",
+        "tour-hotspot",
+        "texture-ref"
+      ]
+    },
+    {
+      "id": "IMG_7466",
+      "w": 1280,
+      "h": 854,
+      "alt": {
+        "pt": "Suíte com parede azul texturizada, cama com colcha verde, piso de madeira e porta de correr abrindo para terraço, piscina e mar.",
+        "en": "Suite with textured blue wall, green bedspread, wood floor and sliding doors opening to a terrace, pool and sea."
+      },
+      "caption": {
+        "pt": "Suíte térrea aberta para o mar",
+        "en": "Ground-floor suite open to the sea"
+      },
+      "focal": [
+        62,
+        52
+      ],
+      "dominant": "#2d6f9c",
+      "palette": [
+        "#2d6f9c",
+        "#2f5b3d",
+        "#a1663a"
+      ],
+      "cat": "suites",
+      "area": "suite-ocean",
+      "time": "interior",
+      "xl": false,
+      "quality": 5,
+      "widths": [
+        480,
+        720,
+        960,
+        1280
+      ],
+      "uses": [
+        "suite-card",
+        "gallery-large",
+        "tour-hotspot"
+      ]
+    },
+    {
+      "id": "IMG_7467",
+      "w": 1280,
+      "h": 854,
+      "alt": {
+        "pt": "Suíte com cama de casal, parede cinza com quadros artesanais, piso de madeira e folhagens tropicais em primeiro plano.",
+        "en": "Suite with double bed, grey wall with handcrafted frames, wood floor and tropical foliage in the foreground."
+      },
+      "caption": {
+        "pt": "Suíte térrea abraçada pelo jardim",
+        "en": "Ground-floor suite wrapped in garden"
+      },
+      "focal": [
+        58,
+        55
+      ],
+      "dominant": "#ece9e2",
+      "palette": [
+        "#ece9e2",
+        "#3f7a3b",
+        "#6a4030"
+      ],
+      "cat": "suites",
+      "area": "suite-inner",
+      "time": "interior",
+      "xl": false,
+      "quality": 4,
+      "widths": [
+        480,
+        720,
+        960,
+        1280
+      ],
+      "uses": [
+        "suite-card",
+        "gallery",
+        "texture-ref"
+      ]
+    },
+    {
+      "id": "IMG_7469",
+      "w": 1280,
+      "h": 854,
+      "alt": {
+        "pt": "Suíte com cama de casal, piso de madeira, painel com TV e porta de vidro para varanda com palmeiras e mar ao fundo.",
+        "en": "Suite with double bed, wood floor, TV panel and glass door to a balcony with palm trees and the sea beyond."
+      },
+      "caption": {
+        "pt": "Acordar com o mar à vista",
+        "en": "Wake up to the ocean view"
+      },
+      "focal": [
+        52,
+        50
+      ],
+      "dominant": "#4f2c20",
+      "palette": [
+        "#4f2c20",
+        "#ebe7df",
+        "#8fc2b6"
+      ],
+      "cat": "suites",
+      "area": "suite-ocean",
+      "time": "interior",
+      "xl": false,
+      "quality": 5,
+      "widths": [
+        480,
+        720,
+        960,
+        1280
+      ],
+      "uses": [
+        "suite-card",
+        "gallery-large",
+        "tour-hotspot"
+      ]
+    },
+    {
+      "id": "IMG_7470",
+      "w": 1280,
+      "h": 854,
+      "alt": {
+        "pt": "Suíte com duas camas de casal, papel de parede de folhas, painel de madeira com TV e porta de vidro para varanda com coqueiro.",
+        "en": "Suite with two double beds, leaf wallpaper, wood panel with TV and a glass door to a balcony facing a coconut palm."
+      },
+      "caption": {
+        "pt": "Suíte entre as copas dos coqueiros",
+        "en": "A suite among the coconut palms"
+      },
+      "focal": [
+        50,
+        45
+      ],
+      "dominant": "#e6e1d8",
+      "palette": [
+        "#e6e1d8",
+        "#6a3f27",
+        "#5e9a4a"
+      ],
+      "cat": "suites",
+      "area": "suite-inner",
+      "time": "interior",
+      "xl": false,
+      "quality": 5,
+      "widths": [
+        480,
+        720,
+        960,
+        1280
+      ],
+      "uses": [
+        "suite-card",
+        "gallery",
+        "tour-hotspot",
+        "texture-ref"
+      ]
+    },
+    {
+      "id": "IMG_7471",
+      "w": 854,
+      "h": 1280,
+      "alt": {
+        "pt": "Banheiro estreito com parede de pedra em relevo, bancada preta, vaso preto e box de vidro com chuveiro tipo chuva.",
+        "en": "Narrow bathroom with stacked stone wall, black countertop and toilet, and a glass shower with rain head."
+      },
+      "caption": {
+        "pt": "Banheiro com pedra clara e detalhes pretos",
+        "en": "Bathroom in pale stone and black accents"
+      },
+      "focal": [
+        50,
+        45
+      ],
+      "dominant": "#d8c6aa",
+      "palette": [
+        "#d8c6aa",
+        "#1b1b1d",
+        "#f0e8dc"
+      ],
+      "cat": "suites",
+      "area": "bathroom",
+      "time": "interior",
+      "xl": false,
+      "quality": 4,
+      "widths": [
+        480,
+        720,
+        854
+      ],
+      "uses": [
+        "gallery",
+        "tour-hotspot",
+        "texture-ref"
+      ]
+    }
+  ]
+}

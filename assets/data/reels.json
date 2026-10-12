@@ -1,0 +1,93 @@
+{
+  "shotMs": 5000,
+  "xfadeMs": 900,
+  "films": [
+    {
+      "id": "chegada",
+      "title": { "pt": "Chegada e sala", "en": "Arrival and Living Room" },
+      "poster": { "photo": "IMG_7464", "focal": [46, 45] },
+      "mp4": null,
+      "webm": null,
+      "vtt": null,
+      "shots": [
+        { "photo": "IMG_7438", "move": "tilt-up", "focal": [52, 48], "fit": "contain", "caption": { "pt": "Passagem de madeira entre jardins tropicais", "en": "Timber walkway through tropical gardens" } },
+        { "photo": "IMG_7436", "move": "push", "focal": [50, 58], "fit": "cover", "caption": { "pt": "Palmeiras emolduram a entrada", "en": "Palms frame the entrance" } },
+        { "photo": "IMG_7464", "move": "pan-r", "focal": [46, 45], "fit": "cover", "caption": { "pt": "Luz dourada, flores e sala integrada", "en": "Golden light, flowers and open-plan living" } },
+        { "photo": "IMG_7465", "move": "pull", "focal": [58, 62], "fit": "cover", "caption": { "pt": "Sala ampla aberta para o mar", "en": "Open living room facing the sea" } },
+        { "photo": "IMG_7459", "move": "pan-l", "focal": [45, 58], "fit": "cover", "caption": { "pt": "Sala de estar em tons de madeira", "en": "Living room in warm wood tones" } }
+      ]
+    },
+    {
+      "id": "mesa-gourmet",
+      "title": { "pt": "Mesa e gourmet", "en": "Dining and Gourmet" },
+      "poster": { "photo": "IMG_7457", "focal": [54, 48] },
+      "mp4": null,
+      "webm": null,
+      "vtt": null,
+      "shots": [
+        { "photo": "IMG_7457", "move": "push", "focal": [54, 48], "fit": "cover", "caption": { "pt": "Mesa de jantar diante do mar", "en": "A dining table facing the sea" } },
+        { "photo": "IMG_7463", "move": "pan-r", "focal": [52, 58], "fit": "cover", "caption": { "pt": "Mesa longa para grandes encontros", "en": "A long table for big gatherings" } },
+        { "photo": "IMG_7458", "move": "pull", "focal": [50, 50], "fit": "cover", "caption": { "pt": "Jantar gourmet sob forro de madeira", "en": "Gourmet dining beneath a timber ceiling" } },
+        { "photo": "IMG_7461", "move": "pan-l", "focal": [55, 58], "fit": "cover", "caption": { "pt": "Gourmet superior com vista para o mar", "en": "Upper gourmet space facing the sea" } },
+        { "photo": "IMG_7462", "move": "push", "focal": [50, 55], "fit": "cover", "caption": { "pt": "Gourmet e sala integrados", "en": "Gourmet and living areas side by side" } }
+      ]
+    },
+    {
+      "id": "piscinas-mar",
+      "title": { "pt": "Piscinas e mar", "en": "Pools and Sea" },
+      "poster": { "photo": "IMG_7444", "focal": [55, 52] },
+      "mp4": null,
+      "webm": null,
+      "vtt": null,
+      "shots": [
+        { "photo": "IMG_7441", "move": "push", "focal": [50, 52], "fit": "cover", "caption": { "pt": "Piscina superior, mar à frente", "en": "Upper pool, sea ahead" } },
+        { "photo": "IMG_7443", "move": "pan-r", "focal": [50, 55], "fit": "cover", "caption": { "pt": "Mesa na varanda, mar à frente", "en": "Veranda table with the sea ahead" } },
+        { "photo": "IMG_7452", "move": "pull", "focal": [40, 60], "fit": "cover", "caption": { "pt": "Espreguiçadeiras entre a piscina e o mar", "en": "Loungers between the pool and the sea" } },
+        { "photo": "IMG_7431", "move": "pull", "focal": [50, 52], "fit": "cover", "caption": { "pt": "A casa vista do alto", "en": "The house from above" } },
+        { "photo": "IMG_7429", "move": "pan-l", "focal": [50, 58], "fit": "cover", "caption": { "pt": "Casa, piscina e jardim vistos do alto", "en": "House, pool and garden from above" } }
+      ]
+    },
+    {
+      "id": "suites",
+      "title": { "pt": "Suítes", "en": "Suites" },
+      "poster": { "photo": "IMG_7469", "focal": [52, 50] },
+      "mp4": null,
+      "webm": null,
+      "vtt": null,
+      "shots": [
+        { "photo": "IMG_7469", "move": "pan-r", "focal": [52, 50], "fit": "cover", "caption": { "pt": "Acordar com o mar à vista", "en": "Wake up to the ocean view" } },
+        { "photo": "IMG_7466", "move": "push", "focal": [62, 52], "fit": "cover", "caption": { "pt": "Suíte aberta para o mar", "en": "Suite open to the sea" } },
+        { "photo": "IMG_7470", "move": "pull", "focal": [50, 45], "fit": "cover", "caption": { "pt": "Suíte entre as copas dos coqueiros", "en": "A suite among the coconut palms" } },
+        { "photo": "IMG_7467", "move": "pan-l", "focal": [58, 55], "fit": "cover", "caption": { "pt": "Suíte abraçada pelo jardim", "en": "Suite wrapped in garden" } },
+        { "photo": "IMG_7471", "move": "tilt-up", "focal": [50, 45], "fit": "contain", "caption": { "pt": "Banheiro com pedra clara e detalhes pretos", "en": "Bathroom in pale stone and black accents" } }
+      ]
+    },
+    {
+      "id": "cinema",
+      "title": { "pt": "Cinema", "en": "Cinema" },
+      "poster": { "photo": "IMG_7424", "focal": [62, 50] },
+      "mp4": null,
+      "webm": null,
+      "vtt": null,
+      "shots": [
+        { "photo": "IMG_7424", "move": "push", "zoom": [1.0, 1.1], "focal": [68, 50], "fit": "cover", "caption": { "pt": "Projeção 4K de 120 polegadas", "en": "120-inch 4K projection" } },
+        { "photo": "IMG_7424", "move": "pan-l", "zoom": [1.12, 1.12], "focal": [30, 70], "fit": "cover", "caption": { "pt": "Som surround 5.1", "en": "5.1 surround sound" } },
+        { "photo": "IMG_7424", "move": "tilt-up", "zoom": [1.12, 1.12], "focal": [35, 15], "fit": "cover", "caption": { "pt": "Poltronas reclináveis elétricas, para 10 pessoas", "en": "Electric reclining seats, for 10 people" } }
+      ]
+    },
+    {
+      "id": "noite",
+      "title": { "pt": "A noite", "en": "Night" },
+      "poster": { "photo": "IMG_7447", "focal": [45, 58] },
+      "mp4": null,
+      "webm": null,
+      "vtt": null,
+      "shots": [
+        { "photo": "IMG_7430", "move": "pull", "focal": [46, 50], "fit": "cover", "caption": { "pt": "Hora azul na Casa Koray", "en": "Blue hour at Casa Koray" } },
+        { "photo": "IMG_7447", "move": "push", "focal": [45, 58], "fit": "cover", "caption": { "pt": "Piscina de borda infinita ao anoitecer", "en": "Infinity pool at dusk" } },
+        { "photo": "IMG_7448", "move": "pan-l", "focal": [62, 66], "fit": "cover", "caption": { "pt": "Fogo, piscina e mar ao anoitecer", "en": "Fire, pool and sea at dusk" } },
+        { "photo": "IMG_7440", "move": "push", "focal": [56, 56], "fit": "cover", "caption": { "pt": "Noite na piscina superior", "en": "Night by the upper pool" } }
+      ]
+    }
+  ]
+}

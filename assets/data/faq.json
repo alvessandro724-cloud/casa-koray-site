@@ -1,0 +1,85 @@
+{
+  "_nota": "Fonte unica do FAQ. Rode node tools/gen-faq.mjs para regenerar o acordeao e o FAQPage em src/partials/120-faq.html e as chaves faq.item.* em assets/data/i18n/en.faq.json.",
+  "items": [
+    {
+      "id": "valor",
+      "q": { "pt": "Qual é o valor da diária?", "en": "What is the daily rate?" },
+      "a": {
+        "pt": "A partir de R$ 13.000, com mínimo de 4 diárias. O valor final e a disponibilidade são confirmados pelo WhatsApp.",
+        "en": "From R$ 13,000, with a 4-night minimum. The final price and availability are confirmed on WhatsApp."
+      }
+    },
+    {
+      "id": "pessoas",
+      "q": { "pt": "Quantas pessoas a casa recebe?", "en": "How many people does the house host?" },
+      "a": {
+        "pt": "Até 25 hóspedes, em 10 suítes e com 13 banheiros.",
+        "en": "Up to 25 guests, in 10 suites with 13 bathrooms."
+      }
+    },
+    {
+      "id": "horarios",
+      "q": { "pt": "Quais são os horários de check-in e check-out?", "en": "What are the check-in and check-out times?" },
+      "a": {
+        "pt": "Check-in às 12 h e check-out às 12 h.",
+        "en": "Check-in at 12 pm and check-out at 12 pm."
+      }
+    },
+    {
+      "id": "pets",
+      "q": { "pt": "A casa aceita pets?", "en": "Are pets allowed?" },
+      "a": {
+        "pt": "Consulte pelo WhatsApp antes de reservar.",
+        "en": "Ask on WhatsApp before booking."
+      }
+    },
+    {
+      "id": "cobrancas",
+      "q": { "pt": "O que é cobrado além da diária?", "en": "What is charged besides the daily rate?" },
+      "a": {
+        "pt": "Água, energia e gás, por consumo, e uma caução reembolsável via PIX.",
+        "en": "Water, electricity and gas, by use, and a refundable PIX deposit."
+      }
+    },
+    {
+      "id": "equipe",
+      "q": { "pt": "Posso contratar equipe?", "en": "Can I hire staff?" },
+      "a": {
+        "pt": "Sim, como opcional pago: cozinheira(o), arrumadeira e bartender, em equipe de 3 a 5 pessoas. Diárias de R$ 270 a R$ 320, conforme a função.",
+        "en": "Yes, as a paid option: cook, housekeeper and bartender, in a team of 3 to 5 people. Daily rates from R$ 270 to R$ 320, depending on the role."
+      }
+    },
+    {
+      "id": "reserva",
+      "q": { "pt": "Como faço a reserva?", "en": "How do I book?" },
+      "a": {
+        "pt": "Direto pelo WhatsApp, ou pelo Airbnb e pelo VRBO.",
+        "en": "Direct on WhatsApp, or through Airbnb and VRBO."
+      }
+    },
+    {
+      "id": "praia",
+      "q": { "pt": "A casa fica perto da praia e da vila?", "en": "Is the house close to the beach and the village?" },
+      "a": {
+        "pt": "Fica de frente para a praia do Tivoli, a 1 minuto a pé. A vila de Praia do Forte fica a 5 minutos a pé e o Projeto Tamar a 15. O aeroporto de Salvador está a 1 hora de carro.",
+        "en": "It faces Tivoli Beach, 1 minute on foot. Praia do Forte village is 5 minutes on foot and Projeto Tamar 15. Salvador Airport is 1 hour by car."
+      }
+    },
+    {
+      "id": "estacionamento",
+      "q": { "pt": "Tem estacionamento?", "en": "Is there parking?" },
+      "a": {
+        "pt": "Sim, privativo, para 12 carros, 6 deles cobertos.",
+        "en": "Yes, private, for 12 cars, 6 of them covered."
+      }
+    },
+    {
+      "id": "seguranca",
+      "q": { "pt": "O condomínio tem segurança?", "en": "Does the condominium have security?" },
+      "a": {
+        "pt": "Sim, 24 horas, com dois portões de pedestres que levam à vila.",
+        "en": "Yes, 24 hours, with two pedestrian gates leading to the village."
+      }
+    }
+  ]
+}

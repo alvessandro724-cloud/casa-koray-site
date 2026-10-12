@@ -1,0 +1,20 @@
+{
+  "chrome.nav.label": "Main",
+  "chrome.nav.casa": "The House",
+  "chrome.nav.filmes": "Films",
+  "chrome.nav.galeria": "Gallery",
+  "chrome.nav.suites": "Suites",
+  "chrome.nav.regiao": "Area",
+  "chrome.nav.comodidades": "Amenities",
+  "chrome.nav.depoimentos": "Reviews",
+  "chrome.nav.perguntas": "Questions",
+  "chrome.nav.localizacao": "Location",
+  "chrome.price.kicker": "from",
+  "chrome.price.amount": "R$&nbsp;13,000",
+  "chrome.price.unit": "/ night",
+  "chrome.menu.open": "Open menu",
+  "chrome.menu.close": "Close menu",
+  "chrome.menu.title": "Menu",
+  "chrome.menu.sections": "Sections",
+  "chrome.bar.label": "Quick booking"
+}
