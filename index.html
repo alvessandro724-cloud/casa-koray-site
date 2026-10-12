@@ -7,7 +7,7 @@
 <meta name="description" content="Casa de temporada para até 25 hóspedes em Praia do Forte: 10 suítes, piscina de borda infinita, cinema e a praia do Tivoli à frente. Reserve direto." data-i18n-attr="content:head.description">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://alvessandro724-cloud.github.io/casa-koray-site/">
-<meta name="theme-color" content="#F6F1E8">
+<meta name="theme-color" content="#F5EADA">
 <meta name="color-scheme" content="light dark">
 
 <meta property="og:type" content="website">
@@ -45,7 +45,7 @@
 </script>
 
 <link rel="preload" href="assets/fonts/CormorantGaramond-var.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/fonts/Jost-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/Archivo-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" as="image" type="image/webp" fetchpriority="high" imagesizes="100vw" imagesrcset="assets/img/opt/IMG_7441-1280.webp 1280w, assets/img/opt/IMG_7441-1920.webp 1920w, assets/img/opt/IMG_7441-2560.webp 2560w">
 
 <link rel="stylesheet" href="assets/css/site.css">
@@ -104,39 +104,52 @@
 <!-- 005-chrome | F2: nav flutuante, menu em folha (dialog), barra fixa mobile e FAB de WhatsApp.
      A barra e o FAB sao movidos por nav.js para o fim do body (ordem de tabulacao: depois do conteudo). -->
 <header class="nav" id="topo" data-nav="photo" data-hero="in" data-module="nav">
-  <nav class="nav__inner" aria-label="Principal" data-i18n-attr="aria-label:chrome.nav.label">
+  <div class="nav__top">
+    <button type="button" class="nav__menu" aria-label="Abrir menu" data-i18n-attr="aria-label:chrome.menu.open" aria-haspopup="dialog" aria-controls="menu" aria-expanded="false" data-menu-open>
+      <svg class="icon icon--list nav__glyph nav__glyph--open" width="28" height="28" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#list"></use></svg>
+      <svg class="icon icon--x nav__glyph nav__glyph--close" width="28" height="28" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#x"></use></svg>
+    </button>
+
     <a class="nav__brand" href="#inicio" translate="no">Casa&nbsp;Koray</a>
 
+    <div class="nav__lang" role="group" aria-label="Idioma" data-i18n-attr="aria-label:core.lang.group">
+      <button type="button" class="nav__langbtn" data-lang-set="pt" lang="pt-BR" aria-pressed="true" aria-label="PT, Português">PT</button>
+      <span class="nav__langsep" aria-hidden="true">|</span>
+      <button type="button" class="nav__langbtn" data-lang-set="en" lang="en" aria-pressed="false" aria-label="EN, English">EN</button>
+    </div>
+  </div>
+
+  <nav class="nav__bar" aria-label="Principal" data-i18n-attr="aria-label:chrome.nav.label">
     <ul class="nav__links">
       <li class="nav__item"><a class="nav__link" href="#casa" data-section="casa" data-i18n="chrome.nav.casa">A casa</a></li>
       <li class="nav__item"><a class="nav__link" href="#filmes" data-section="filmes" data-i18n="chrome.nav.filmes">Filmes</a></li>
       <li class="nav__item"><a class="nav__link" href="#galeria" data-section="galeria" data-i18n="chrome.nav.galeria">Galeria</a></li>
+      <li class="nav__item"><a class="nav__link" href="#comodidades" data-section="comodidades" data-i18n="chrome.nav.comodidades">Comodidades</a></li>
       <li class="nav__item"><a class="nav__link" href="#suites" data-section="suites" data-i18n="chrome.nav.suites">Suítes</a></li>
-      <li class="nav__item nav__item--wide"><a class="nav__link" href="#regiao" data-section="regiao" data-i18n="chrome.nav.regiao">Região</a></li>
+      <li class="nav__item"><a class="nav__link" href="#regiao" data-section="regiao" data-i18n="chrome.nav.regiao">Região</a></li>
+      <li class="nav__item"><a class="nav__link" href="#localizacao" data-section="localizacao" data-i18n="chrome.nav.localizacao">Localização</a></li>
     </ul>
-
-    <div class="nav__end">
-      <a class="nav__price" href="#reservar" data-book>
-        <span class="nav__price-kicker" data-i18n="chrome.price.kicker">a partir de</span>
-        <span class="nav__price-line"><b class="nav__price-amount" data-i18n-html="chrome.price.amount">R$&nbsp;13.000</b> <span class="nav__price-unit" data-i18n="chrome.price.unit">/ diária</span></span>
-      </a>
-
-      <div class="segmented nav__lang" role="group" aria-label="Idioma" data-i18n-attr="aria-label:core.lang.group">
-        <button type="button" class="segmented__item" data-lang-set="pt" lang="pt-BR" aria-pressed="true" aria-label="PT, Português">PT</button>
-        <button type="button" class="segmented__item" data-lang-set="en" lang="en" aria-pressed="false" aria-label="EN, English">EN</button>
-      </div>
-
-      <a class="btn btn--primary btn--compact nav__cta" href="#reservar" data-book>
-        <span class="btn__label" data-i18n="core.intent.book">Reservar</span>
-      </a>
-
-      <button type="button" class="icon-btn nav__menu" aria-label="Abrir menu" data-i18n-attr="aria-label:chrome.menu.open" aria-haspopup="dialog" aria-controls="menu" aria-expanded="false" data-menu-open>
-        <svg class="icon icon--list nav__glyph nav__glyph--open" width="24" height="24" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#list"></use></svg>
-        <svg class="icon icon--x nav__glyph nav__glyph--close" width="24" height="24" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#x"></use></svg>
-      </button>
-    </div>
   </nav>
 </header>
+
+<form class="bookbar" data-bookbar data-module="bookbar" novalidate aria-label="Reserve sua estada" data-i18n-attr="aria-label:chrome.bookbar.title">
+  <p class="bookbar__title" aria-hidden="true" data-i18n="chrome.bookbar.title">Reserve sua estada</p>
+  <label class="bookbar__field">
+    <span class="bookbar__label" data-i18n="chrome.bookbar.checkin">Check-in</span>
+    <input class="bookbar__input" type="date" name="checkin" autocomplete="off">
+  </label>
+  <label class="bookbar__field">
+    <span class="bookbar__label" data-i18n="chrome.bookbar.checkout">Check-out</span>
+    <input class="bookbar__input" type="date" name="checkout" autocomplete="off">
+  </label>
+  <label class="bookbar__field bookbar__field--guests">
+    <span class="bookbar__label" data-i18n="chrome.bookbar.guests">Hóspedes</span>
+    <input class="bookbar__input" type="number" name="guests" min="1" max="25" step="1" value="2" inputmode="numeric" autocomplete="off">
+  </label>
+  <button type="submit" class="btn btn--primary bookbar__btn">
+    <span class="btn__label" data-i18n="core.intent.book">Reservar</span>
+  </button>
+</form>
 
 <script>
 /* F2: um toque no menu antes de nav.js subir fica na fila (main.js espera photos.json e o idioma antes de montar os modulos) */
@@ -232,7 +245,7 @@
       <h1 class="hero__title" id="hero-h1">
         <span class="sr-only" translate="no">Casa&nbsp;Koray. </span>
         <span class="hero__line"><span data-i18n="hero.h1.l1">Paraíso em</span></span>
-        <span class="hero__line"><span translate="no"><em>Praia do Forte.</em></span></span>
+        <span class="hero__line"><span translate="no">Praia do Forte</span></span>
       </h1>
       <p class="hero__sub" data-i18n-html="hero.sub">Casa de temporada de frente para a praia do Tivoli, com 10&nbsp;suítes e piscina de borda infinita.</p>
       <div class="hero__actions" data-hero-ctas>
@@ -255,7 +268,7 @@
       <i class="casa__slat" style="--i:0" aria-hidden="true"></i><i class="casa__slat" style="--i:1" aria-hidden="true"></i><i class="casa__slat" style="--i:2" aria-hidden="true"></i><i class="casa__slat" style="--i:3" aria-hidden="true"></i><i class="casa__slat" style="--i:4" aria-hidden="true"></i><i class="casa__slat" style="--i:5" aria-hidden="true"></i><i class="casa__slat" style="--i:6" aria-hidden="true"></i><i class="casa__slat" style="--i:7" aria-hidden="true"></i>
     </div>
     <div class="casa__body">
-      <h2 id="casa-h2" data-i18n="casa.h2">Para 25 hóspedes, de&nbsp;frente para o mar.</h2>
+      <h2 id="casa-h2" data-i18n="casa.h2">Para 25 hóspedes, de&nbsp;frente para o mar</h2>
       <p class="lead casa__sub" data-i18n-html="casa.sub">Dois andares de madeira, vidro e pedra, em 1.400&nbsp;m² de terreno no condomínio <span translate="no">Porto das Baleias</span>, em <span translate="no">Praia do Forte</span>.</p>
       <ul class="casa__facts" data-reveal-group>
         <li class="casa__fact reveal">
@@ -291,7 +304,7 @@
 <section id="filmes" class="reels section section--alt" aria-labelledby="filmes-h2" data-module="reels">
   <div class="container">
     <header class="section__head">
-      <h2 id="filmes-h2" class="reveal" data-i18n="filmes.h2">Cada ambiente em movimento.</h2>
+      <h2 id="filmes-h2" class="reveal" data-i18n="filmes.h2">Cada ambiente em movimento</h2>
       <p class="lead reveal" data-i18n="filmes.lead">Filmes curtos feitos com as fotos da casa. Escolha um ambiente e assista.</p>
     </header>
   </div>
@@ -439,7 +452,7 @@
 <section id="galeria" class="galeria section" aria-labelledby="galeria-h2" data-module="lightbox">
   <div class="container">
     <header class="section__head">
-      <h2 id="galeria-h2" class="reveal" data-i18n="galeria.h2">30 fotos, uma casa.</h2>
+      <h2 id="galeria-h2" class="reveal" data-i18n="galeria.h2">30 fotos, uma casa</h2>
       <p class="lead reveal" data-i18n="galeria.lead">Escolha uma foto para ampliar.</p>
     </header>
   </div>
@@ -506,7 +519,7 @@
   <div class="container--wide">
     <header class="section__head">
       <p class="eyebrow" data-i18n="comodidades.eyebrow">Comodidades</p>
-      <h2 id="comodidades-h2" data-i18n="comodidades.h2">Piscinas, lareira, cinema e dois espaços gourmet.</h2>
+      <h2 id="comodidades-h2" data-i18n="comodidades.h2">Piscinas, lareira, cinema e dois espaços gourmet</h2>
       <p class="lead" data-i18n="comodidades.sub">E uma equipe opcional de 3 a 5 pessoas para cozinhar, arrumar e servir.</p>
     </header>
 
@@ -573,7 +586,7 @@
   <div class="container suites__layout">
     <div class="suites__side">
       <header class="suites__head">
-        <h2 id="suites-h2" data-i18n="suites.h2">10 suítes, 5&nbsp;de&nbsp;frente para o mar.</h2>
+        <h2 id="suites-h2" data-i18n="suites.h2">10 suítes, 5&nbsp;de&nbsp;frente para o mar</h2>
         <p class="lead" data-i18n="suites.sub">Todas com frigobar, TV, cortinas elétricas e climatização.</p>
       </header>
       <div class="suites__matrix-slot" data-suites-matrix>
@@ -779,7 +792,7 @@
 <section id="regiao" class="regiao section section--tint" aria-labelledby="regiao-h2">
   <div class="container">
     <header class="section__head">
-      <h2 id="regiao-h2" data-i18n-html="regiao.h2"><span translate="no">Praia do Forte</span> a pé.</h2>
+      <h2 id="regiao-h2" data-i18n-html="regiao.h2"><span translate="no">Praia do Forte</span> a pé</h2>
       <p class="lead" data-i18n-html="regiao.sub">Da casa, a praia do Tivoli fica a 1&nbsp;minuto, a vila a 5 e o <span translate="no">Projeto Tamar</span> a 15.</p>
     </header>
 
@@ -818,7 +831,7 @@
      Reduced-motion ou sem JS: .stage__track some e .stage__static (3 blocos empilhados) aparece. Controle: assets/js/stage.js. -->
 <section id="dia-noite" class="stage section section--flush-bottom" aria-labelledby="dn-h2" data-module="stage" data-phase="dia">
   <header class="container section__head stage__head">
-    <h2 id="dn-h2" class="reveal" data-i18n="dianoite.h2">Quando o dia termina, a casa acende.</h2>
+    <h2 id="dn-h2" class="reveal" data-i18n="dianoite.h2">Quando o dia termina, a casa acende</h2>
     <p class="lead reveal" data-i18n="dianoite.lead">Luz quente no forro de madeira, piscina iluminada e a lareira ecológica ao lado.</p>
   </header>
 
@@ -885,7 +898,7 @@
 <section id="depoimentos" class="depoimentos section" data-chapter="night" aria-labelledby="depoimentos-h2" data-module="depoimentos">
   <div class="container">
     <header class="section__head">
-      <h2 id="depoimentos-h2" data-i18n="depoimentos.h2">Quem já ficou na casa.</h2>
+      <h2 id="depoimentos-h2" data-i18n="depoimentos.h2">Quem já ficou na casa</h2>
     </header>
 
     <div class="depoimentos__grid">
@@ -940,7 +953,7 @@
 
     <header class="reservar__head reveal">
       <p class="eyebrow" data-i18n="reservar.eyebrow">Reserva</p>
-      <h2 id="reservar-h2" data-i18n="reservar.h2">Escolha as datas da sua temporada.</h2>
+      <h2 id="reservar-h2" data-i18n="reservar.h2">Escolha as datas da sua temporada</h2>
       <p class="lead" data-i18n-html="reservar.sub">Reserva direta pelo <span translate="no">WhatsApp</span>, ou pelo <span translate="no">Airbnb</span> e pelo <span translate="no">VRBO</span>.</p>
     </header>
 
@@ -1041,7 +1054,7 @@
 <section id="faq" class="faq section section--alt" data-chapter="night" aria-labelledby="faq-h2">
   <div class="container faq__layout">
     <header class="faq__head">
-      <h2 id="faq-h2" data-i18n="faq.h2">Perguntas frequentes.</h2>
+      <h2 id="faq-h2" data-i18n="faq.h2">Perguntas frequentes</h2>
     </header>
     <div class="faq__body">
       <div class="accordion faq__list">
@@ -1182,10 +1195,10 @@
 </script>
 <!-- faq:jsonld:end -->
 </section>
-<section id="localizacao" class="localizacao section" data-chapter="night" aria-labelledby="localizacao-h2" data-module="map">
+<section id="localizacao" class="localizacao section" data-chapter="night" aria-labelledby="localizacao-h2">
   <div class="container localizacao__layout">
     <div class="localizacao__info">
-      <h2 id="localizacao-h2" data-i18n="localizacao.h2">Como chegar.</h2>
+      <h2 id="localizacao-h2" data-i18n="localizacao.h2">Como chegar</h2>
       <ul class="localizacao__facts" data-reveal-group>
         <li class="localizacao__fact reveal">
           <svg class="icon icon--map-pin localizacao__icon" width="24" height="24" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#map-pin"></use></svg>
@@ -1207,20 +1220,9 @@
     </div>
 
     <div class="localizacao__map">
-      <div class="localizacao__frame" data-map>
-        <div class="localizacao__facade" data-map-facade>
-          <div class="localizacao__facade-inner">
-            <p class="localizacao__place" translate="no">Praia do Forte, Bahia</p>
-            <p class="localizacao__facade-coords" data-i18n="localizacao.coords">-12,5811867 / -38,0082405</p>
-            <button class="btn btn--secondary localizacao__load" type="button" data-map-load>
-              <span class="btn__label" data-i18n="core.intent.map.load">Carregar mapa</span>
-              <span class="btn__icon"><svg class="icon icon--map-trifold" width="20" height="20" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#map-trifold"></use></svg><span class="btn__spinner" aria-hidden="true"></span></span>
-            </button>
-          </div>
-        </div>
+      <div class="localizacao__frame">
+        <iframe class="is-ready" src="https://www.google.com/maps?q=-12.5811867,-38.0082405&amp;z=15&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen title="Mapa: localização da Casa Koray em Praia do Forte" data-i18n-attr="title:localizacao.iframe"></iframe>
       </div>
-      <p class="localizacao__note caption" data-i18n="localizacao.note">O Google Maps só é carregado depois do seu clique.</p>
-      <p class="sr-only" role="status" aria-live="polite" data-map-live></p>
     </div>
   </div>
 </section>

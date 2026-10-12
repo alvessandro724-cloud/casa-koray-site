@@ -1,5 +1,5 @@
 {
-  "galeria.h2": "30 Photos, One House.",
+  "galeria.h2": "30 Photos, One House",
   "galeria.lead": "Pick a photo to enlarge.",
   "galeria.unit": "photos",
   "galeria.filters": "Filter photos by category",
@@ -11,7 +11,6 @@
   "galeria.enlarge": "Enlarge photo",
   "galeria.empty": "No photos in this filter.",
   "galeria.empty.reset": "Show All",
-
   "galeria.tile.IMG_7463": "Enlarge photo: A long table for big gatherings",
   "galeria.tile.IMG_7456": "Enlarge photo: Dining table open to the garden",
   "galeria.tile.IMG_7445": "Enlarge photo: Covered terrace facing the open sea",

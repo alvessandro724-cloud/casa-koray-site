@@ -16,5 +16,9 @@
   "chrome.menu.close": "Close menu",
   "chrome.menu.title": "Menu",
   "chrome.menu.sections": "Sections",
-  "chrome.bar.label": "Quick booking"
+  "chrome.bar.label": "Quick booking",
+  "chrome.bookbar.title": "Book Your Stay",
+  "chrome.bookbar.checkin": "Check-in",
+  "chrome.bookbar.checkout": "Check-out",
+  "chrome.bookbar.guests": "Guests"
 }

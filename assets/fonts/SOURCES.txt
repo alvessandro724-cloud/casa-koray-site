@@ -1,7 +1,7 @@
 Fontes auto-hospedadas (licenca SIL Open Font License 1.1, arquivos LICENSE-*.txt nesta pasta)
 
+Archivo-var.woff2                   @fontsource-variable/archivo@5.3.0             files/archivo-latin-wdth-normal.woff2  (eixos wght 100-900 e wdth 62-125)
 CormorantGaramond-var.woff2         @fontsource-variable/cormorant-garamond@5.3.0  files/cormorant-garamond-latin-wght-normal.woff2
 CormorantGaramond-Italic-var.woff2  @fontsource-variable/cormorant-garamond@5.3.0  files/cormorant-garamond-latin-wght-italic.woff2
-Jost-var.woff2                      @fontsource-variable/jost@5.3.0                files/jost-latin-wght-normal.woff2
 
 Origem: https://cdn.jsdelivr.net/npm/<pacote>/<arquivo>
